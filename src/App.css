@@ -1,0 +1,140 @@
+/* ======== This is home text animation css ======== */
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  font-size: 60px;
+  display: flex;
+  /* margin-top: 120px; */
+}
+.waviy span {
+  font-family: "Alfa Slab One", cursive;
+  position: relative;
+  display: inline-block;
+  color: rgb(13, 13, 58);
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes waviy {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+
+/* =================== This is home page css ================= */
+
+/* ** Add prallox image on the home page. */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.home-content {
+  background-color: var(--home-color);
+}
+
+.home-bg{
+  background-color: #D5C455;
+  /* width: 20%; */
+}
+
+.multylayer {
+  /* width: 30%; */
+  height: 100vh;
+  /* position: relative; */
+  background-image: url("images/image.png");
+  background-size: cover;
+  background-size: 45% 120%;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  background-attachment: fixed;
+}
+
+/* This is second layer of home section */
+
+.text-shadow {
+  background-color: #e6cacd;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  position: absolute;
+  /* margin-top: 40px; */
+  /* margin-left: -100px; */
+  box-shadow: 0 0 20px #e6cacd;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 70px; */
+}
+
+.right-hero img {
+  width: 90%;
+}
+
+.left-hero {
+  width: 100vh;
+  padding: 40px;
+}
+
+.absolute-text {
+  position: relative;
+}
+
+/* Home page thired layer */
+
+.infinity-text-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100px; /* Adjust the height as needed */
+}
+
+.infinity-text {
+  white-space: nowrap;
+  position: absolute;
+  font-size: 2rem;
+  color: var(--text-color);
+  animation: marquee 10s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* CSS for border radius */
+
+.custom-shape-divider-bottom-1704551877 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.speciar {
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url("./assets/svg/layered-waves-haikei.svg");
+}

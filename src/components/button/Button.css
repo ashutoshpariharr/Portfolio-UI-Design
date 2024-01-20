@@ -1,0 +1,119 @@
+.button-login {
+  display: grid;
+  min-height: 200px;
+  place-content: center;
+  /* background-color: #1f2937; */
+  padding: 1rem;
+}
+
+
+.bycrypt {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #6b7280; 
+    border-radius: 8px;
+    background-color: #4b5563;
+    padding: 8px 16px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #9ca3af;
+    transition: color 0.3s;
+  }
+  
+  .bycrypt:hover {
+    color: #93c5fd;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  .z-10 {
+    z-index: 10;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .gap-2 {
+    gap: 0.5rem;
+  }
+
+
+  .movement {
+    duration: 300ms;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    transform: scale(1.25);
+    background: linear-gradient(
+      to top,
+      rgba(79, 70, 229, 0) 0%,
+      rgba(79, 70, 229, 1) 40%,
+      rgba(79, 70, 229, 0) 60%,
+      rgba(79, 70, 229, 0) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .group:hover .movement {
+    opacity: 1;
+  }
+
+
+
+  /* styles.css */
+
+.button-wrapper {
+  display: flex;
+  min-height: 200px;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #1f2937; */
+  padding: 0 4px;
+}
+
+.spotlight-button {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #1e293b;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.spotlight-button:hover {
+  transform: scale(0.985);
+}
+
+.spotlight-text {
+  pointer-events: none;
+  z-index: 10;
+  mix-blend-mode: difference;
+}
+
+.spotlight {
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 32px;
+  width: 32px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #f0f4f8;
+}
+
+  
+  

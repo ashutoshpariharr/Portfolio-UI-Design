@@ -1,0 +1,36 @@
+.containerr{
+    /* max-width: 120rem; */
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #040e18;
+    height: 5rem;
+    /* background: transparent; */
+}
+
+ul{
+    display: flex;
+    gap: 3.2rem;
+    margin-top: -10px;
+    margin-right: 10px;
+    font-family: "Itim", cursive;
+}
+
+img{
+    width: 100px;
+    border-radius: 10px;
+    margin-top: -30px;
+}
+
+.remove-li{
+    list-style-type: none;
+}
+
+ul li #navaa{
+    color: white;
+    font-size: 1.2rem;
+}
+
+ul li #navaa:hover{
+    color: red;
+}

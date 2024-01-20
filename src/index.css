@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100&family=Itim&display=swap");
+
+/* CSS for all containet in over service website */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Urbanist, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* color-scheme: light dark; */
+  color: var(--bg-color);
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1c1d20;
+  --btn-color: #455ce9;
+  --dark-color: #1c1d20;
+  --home-color:#999d9e;
+  --helper-color: #99b9ff;
+}
+
+/* color for after button testimonial #f9bdae */
+/* inside the text #004534 */
+
+/** ================ Text animation in over home page ============= */
+
+.err-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 120px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* ======== animation for 404 wok ========== */
+
+.lotti-right {
+  width: 900px;
+  margin-top: 60px;
+  margin-right: 60px;
+}
+
+.content {
+  display: flex;
+}
+
+.btns {
+  padding: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: -30px;
+}
+
+.btns button {
+  padding: 15px;
+  text-decoration: none;
+  align-items: center;
+  font-family: "Itim", cursive;
+  border-radius: 7px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid black;
+  background: none;
+}
+.btns button:hover {
+  background-color: #4681f4;
+  border: none;
+  color: black;
+  box-shadow: 0 0 8px #4681f4;
+}
+#navaa {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.incons {
+  position: relative;
+}
+
+.instagram-icon {
+  width: 400px;
+  height: 400px;
+}
+
+/* =============== This CSS For footer component ============ */
+
+.footer .main-img img {
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgb(18, 67, 181);
+  transition: 1s;
+}
+
+.footer .main-img img:hover {
+  transform: rotate(360deg);
+}
+
+.footer .main-img p {
+  color: white;
+}
+
+.footer .footer-icons img {
+  border-radius: 7px;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.footer .footer-icons img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+  background-color: #0d0d32;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer .footer-text {
+  display: flex;
+}
+
+.img-icon {
+  margin-top: 135px;
+}
+
+/* ================== Edit footer text =======================  */
+
+.footer .footer-text .quik span {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.footer .footer-text .quik {
+  padding: 30px;
+  margin: 70px 70px;
+}
+
+.footer .footer-text .quik p {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 0.9s;
+}
+
+.footer .footer-text .quik p:hover {
+  color: tomato;
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.lover-text {
+  color: rgb(0, 0, 0);
+  padding: 30px;
+  text-align: center;
+}
+
+.lover-text img {
+  border-radius: 50px;
+}
+
+/* =========== For Resposiveness ============= */
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .main-img img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .footer .footer-text .quik {
+    margin: 10px 0;
+  }
+
+  .footer .footer-text .quik p {
+    font-size: 14px;
+  }
+
+  .img-icon {
+    margin-top: 10px;
+  }
+
+  .lover-text {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+  }
+}
