@@ -12,13 +12,16 @@ import Login from "./pages/Login";
 import Navbar from "./components/navbar/Navbar";
 import PageNotFound from "./pages/PageNotFound";
 import { Logout } from "./pages/Logout";
-import AdminLayout from './layouts/Admin-layout'
+import AdminLayout from "./layouts/Admin-layout";
 import AdminUsers from "./pages/Admin-users";
 import AdminContacts from "./pages/Admin-contacts";
-import { useEffect } from "react";
-import Footer from "./pages/Footer";
+import { useEffect, useState } from "react";
+// import Footer from "./pages/Footer";
+import AnimationNav from "./Navbar-animation/AnimationNav";
 
 function App() {
+  // const [showNav, setShowNav] = useState(false);
+
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -30,10 +33,25 @@ function App() {
     requestAnimationFrame(raf);
   }, []);
 
+  // const showNavbar = () => {
+  // console.log(window.scrollY);
+  //   if (window.scrollY > 150) {
+  //     setShowNav(true);
+  //   } else {
+  //     setShowNav(false);
+  //   }
+  // };
+
+  // window.addEventListener("scroll", showNavbar);
+
   return (
     <>
       <BrowserRouter>
+        {/* {showNav ? <AnimationNav />:<Navbar />} */}
+
         <Navbar />
+        <AnimationNav />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -50,7 +68,7 @@ function App() {
             <Route path="contacts" element={<AdminContacts />} />
           </Route>
         </Routes>
-        <Footer/>
+        {/* <Footer /> */}
       </BrowserRouter>
     </>
   );

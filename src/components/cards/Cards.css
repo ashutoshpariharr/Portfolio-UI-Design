@@ -72,12 +72,12 @@
   
   /* -- ↓ ↓ ↓ extra card content styles ↓ ↓ ↓ -- */
   
-  h1, h2, h3, h4, span {
+  /* h1, h2, h3, h4, span {
     color: rgb(240, 240, 240);
     font-family: "Rubik", sans-serif;
     font-weight: 400;
     margin: 0px;
-  }
+  } */
   
   i {  
     color: rgb(240, 240, 240);
@@ -199,7 +199,7 @@
     color: rgb(94, 106, 210);
   }
   
-  .link {
+  /* .link {
     align-items: center;
     backdrop-filter: blur(3px);
     background-color: rgba(255, 255, 255, 0.05);
@@ -214,18 +214,18 @@
     position: fixed;
     text-decoration: none;
     z-index: 100;
-  }
+  } */
   
-  .link:hover {
+  /* .link:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-  }
+  } */
   
-  .link > i, .link > span {
+  /* .link > i, .link > span {
     height: 20px;
     line-height: 20px;
   }
   
   .link > span {
     color: white;
-  }
+  } */

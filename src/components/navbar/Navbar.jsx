@@ -8,11 +8,12 @@ export const Navbar = () => {
     <div>
       <header>
         <div className="containerr">
-          <div className="logo">
+          {/* <div className="logo">
             <a href="/">
               <img src="/images/logo.png" alt="this is header logo" />
             </a>
-          </div>
+          </div> */}
+
           <nav>
             <ul className="remove-li">
               <li>
@@ -20,7 +21,7 @@ export const Navbar = () => {
                   id="navaa"
                   to="/"
                   style={({ isActive }) => ({
-                    color: isActive ? "greenyellow" : "white",
+                    color: isActive ? "greenyellow" : "black",
                   })}
                 >
                   Home
@@ -32,7 +33,7 @@ export const Navbar = () => {
                   id="navaa"
                   to="/about"
                   style={({ isActive }) => ({
-                    color: isActive ? "greenyellow" : "white",
+                    color: isActive ? "greenyellow" : "black",
                   })}
                 >
                   About
@@ -44,7 +45,7 @@ export const Navbar = () => {
                   id="navaa"
                   to="/service"
                   style={({ isActive }) => ({
-                    color: isActive ? "greenyellow" : "white",
+                    color: isActive ? "greenyellow" : "black",
                   })}
                 >
                   Service
@@ -56,7 +57,7 @@ export const Navbar = () => {
                   id="navaa"
                   to="/contact"
                   style={({ isActive }) => ({
-                    color: isActive ? "greenyellow" : "white",
+                    color: isActive ? "greenyellow" : "black",
                   })}
                 >
                   Contact
@@ -68,7 +69,7 @@ export const Navbar = () => {
                     id="navaa"
                     to="/logout"
                     style={({ isActive }) => ({
-                      color: isActive ? "greenyellow" : "white",
+                      color: isActive ? "greenyellow" : "black",
                     })}
                   >
                     Logout
@@ -81,7 +82,7 @@ export const Navbar = () => {
                       id="navaa"
                       to="/login"
                       style={({ isActive }) => ({
-                        color: isActive ? "greenyellow" : "white",
+                        color: isActive ? "greenyellow" : "black",
                       })}
                     >
                       Login
@@ -92,7 +93,7 @@ export const Navbar = () => {
                       id="navaa"
                       to="/register"
                       style={({ isActive }) => ({
-                        color: isActive ? "greenyellow" : "white",
+                        color: isActive ? "greenyellow" : "black",
                       })}
                     >
                       Register

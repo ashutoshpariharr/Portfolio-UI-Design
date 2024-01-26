@@ -8,7 +8,7 @@
   box-sizing: border-box;
   font-family: Urbanist, system-ui, Avenir, Helvetica, Arial, sans-serif;
   /* color-scheme: light dark; */
-  color: var(--bg-color);
+  /* color: var(--bg-color); */
 }
 
 :root {

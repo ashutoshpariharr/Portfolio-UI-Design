@@ -37,18 +37,78 @@
 }
 
 .home-content {
-  background-color: var(--home-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  /* align-items: center; */
+  margin-left: 6.5rem;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.home-bg{
-  background-color: #D5C455;
+.home-content h1 {
+  font-size: 5rem;
+}
+.home-content p {
+  font-size: 2rem;
+  color: #d5c455;
+}
+
+.home-btn {
+  margin-top: 20px;
+}
+
+.home-btn button {
+  padding: 15px;
+  font-size: 1.3rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  align-items: center;
+  opacity: 1;
+}
+
+.home-content .home-btn .btn-2 {
+  background: transparent;
+  border: 2px solid#d5c455;
+  /* color: var(--text-color); */
+  color: #d5c455;
+  margin-left: 50px;
+  opacity: 1;
+}
+
+.home-btn .btn-1 {
+  color: white;
+  background-color: #d5c455;
+  border: none;
+  opacity: 1;
+}
+
+.home-btn .btn-1 span {
+  opacity: 0;
+  margin-top: 200px;
+  transform: rotate(-45deg);
+  /* transition: opacity 0.5s ease-in-out; */
+}
+
+.home-btn .btn-1:hover span {
+  opacity: 1;
+}
+
+.home-btn .btn-1:hover span {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.home-bg {
+  background-color: #d5c455;
   /* width: 20%; */
 }
 
 .multylayer {
   /* width: 30%; */
   height: 100vh;
-  /* position: relative; */
+  /* position: absolute; */
   background-image: url("images/image.png");
   background-size: cover;
   background-size: 45% 120%;
@@ -77,14 +137,6 @@
   /* margin-top: 70px; */
 }
 
-.right-hero img {
-  width: 90%;
-}
-
-.left-hero {
-  width: 100vh;
-  padding: 40px;
-}
 
 .absolute-text {
   position: relative;
@@ -96,15 +148,16 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 100px; /* Adjust the height as needed */
+  height: 100px;
+  margin-top: 30px;
 }
 
 .infinity-text {
   white-space: nowrap;
-  position: absolute;
+  /* position: relative; */
   font-size: 2rem;
   color: var(--text-color);
-  animation: marquee 10s linear infinite; /* Adjust the duration as needed */
+  animation: marquee 30s linear infinite;
 }
 
 @keyframes marquee {
@@ -114,6 +167,44 @@
   100% {
     transform: translateX(-100%);
   }
+}
+
+/* Css for constomer satisfaction */
+
+.constomer-satisfaction {
+  display: flex;
+}
+
+.constomer-satisfaction .cos-1{
+  width: 50%;
+  color: #d5c455;
+}
+.constomer-satisfaction .cos-1 h2{
+  display: flex;
+  align-items: center;
+  margin-top: 8rem;
+  /* margin-left: -40px; */
+  justify-content: center;
+}
+.constomer-satisfaction .cos-2{
+  width: 50%;
+}
+.constomer-satisfaction .cos-2 p{
+  font-size: 1.5rem;
+}
+
+/* ? This is crousel css */
+
+.crousel{
+  align-items: center;
+  margin-top: 30px;
+}
+
+.crousel-card{
+  width: 45%;
+  padding: 2rem;
+  height: 40vh;
+  background-color: red;
 }
 
 /* CSS for border radius */
