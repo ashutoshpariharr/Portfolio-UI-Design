@@ -4,7 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 const responsive = {
   desktop: {
     breakpoint: { max: 1500, min: 1024 },
-    items: 3,
+    items: 2,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -16,41 +16,63 @@ const responsive = {
   },
 };
 
+const data = [
+  {
+    url: "images/card1.webp",
+    type: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id veniam asperiores, totam iure eos, culpa vitae quis corporis nam dolorum esse qui quo numquam? Et itaque inventore voluptates fugiat aliquam!",
+    footer: '"MERN STACK"',
+  },
+  {
+    url: "images/card2.webp",
+    type: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id veniam asperiores, totam iure eos, culpa vitae quis corporis nam dolorum esse qui quo numquam? Et itaque inventore voluptates fugiat aliquam!",
+    footer: '"Front-end Developer"',
+  },
+  {
+    url: "images/card3.webp",
+    type: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, quisquam.",
+    footer: '"Back-end developer"',
+  },
+  {
+    url: "images/card2.webp",
+    type: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id veniam asperiores, totam iure eos, culpa vitae quis corporis nam dolorum esse qui quo numquam? Et itaque inventore voluptates fugiat aliquam!",
+    footer: '"Full Stack Developer"',
+  },
+];
+
 function Curousel() {
   return (
     <Carousel
       responsive={responsive}
       dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
+      // itemClass="carousel-item-padding-40-px"
       swipeable={false}
       infinite={true}
-      keyBoardControl={true}
+      // keyBoardControl={true}
       draggable={false}
       containerClass="carousel-container"
-      autoPlay={true}
-      autoPlaySpeed={10000}
+      // autoPlay={true}
+      // autoPlaySpeed={4000}
     >
-      <div className="crousel-card">
-        <img src="images/card1.webp" alt="This is a registeration img" />
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
-          corrupti!
-        </p>
-      </div>
-      <div className="crousel-card">
-        <img src="images/card2.webp" alt="This is a registeration img" />
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
-          corrupti!
-        </p>
-      </div>
-      <div className="crousel-card">
-        <img src="images/card3.webp" alt="This is a registeration img" />
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
-          corrupti!
-        </p>
-      </div>
+      {data.map((info, index) => (
+        <div className="banner" key={index}>
+          <div className="child-banner">
+            <img src={info.url} alt={`banner ${index}`} />
+          </div>
+
+          <div className="child-para">
+            <p> {info.type} </p>
+            <br />
+            <h2> {info.footer} </h2>
+            <br />
+            <button className="banner-btn">
+              {" "}
+              <span>View More </span>
+            </button>
+          </div>
+        </div>
+      ))}
+
+      {/* </div> */}
     </Carousel>
   );
 }

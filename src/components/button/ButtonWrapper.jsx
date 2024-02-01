@@ -2,12 +2,9 @@ import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import './Button.css';
 
-
 const ButtonWrapper = () => {
   return (
-    <div className="button-wrapper">
-      <SpotlightButton />
-    </div>
+    <SpotlightButton />
   );
 };
 
@@ -31,14 +28,21 @@ const SpotlightButton = () => {
       );
     };
 
-    btnRef.current.addEventListener("mousemove", handleMouseMove);
-    btnRef.current.addEventListener("mouseleave", handleMouseLeave);
+    // Check if btnRef.current is not null before adding event listeners
+    if (btnRef.current) {
+      btnRef.current.addEventListener("mousemove", handleMouseMove);
+      btnRef.current.addEventListener("mouseleave", handleMouseLeave);
+    }
 
+    // Cleanup function
     return () => {
-      btnRef.current.removeEventListener("mousemove", handleMouseMove);
-      btnRef.current.removeEventListener("mouseleave", handleMouseLeave);
+      // Check if btnRef.current is not null before removing event listeners
+      if (btnRef.current) {
+        btnRef.current.removeEventListener("mousemove", handleMouseMove);
+        btnRef.current.removeEventListener("mouseleave", handleMouseLeave);
+      }
     };
-  }, []);
+  }, []); // Dependency array is empty to run this effect only once
 
   return (
     <motion.button

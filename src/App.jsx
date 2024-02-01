@@ -68,7 +68,7 @@ function App() {
             <Route path="contacts" element={<AdminContacts />} />
           </Route>
         </Routes>
-        {/* <Footer /> */}
+       
       </BrowserRouter>
     </>
   );

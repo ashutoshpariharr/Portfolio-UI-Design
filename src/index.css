@@ -16,7 +16,7 @@
   --text-color: #1c1d20;
   --btn-color: #455ce9;
   --dark-color: #1c1d20;
-  --home-color:#999d9e;
+  --home-color: #999d9e;
   --helper-color: #99b9ff;
 }
 
@@ -113,113 +113,81 @@
 
 /* =============== This CSS For footer component ============ */
 
-.footer .main-img img {
+.footer-container {
+  background-color: var(--text-color);
+  padding: 11rem;
+  color: var(--bg-color);
+}
+
+.circle {
+  background-color: #455ce9;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
-  box-shadow: 0 0 20px rgb(18, 67, 181);
-  transition: 1s;
-}
-
-.footer .main-img img:hover {
-  transform: rotate(360deg);
-}
-
-.footer .main-img p {
   color: white;
-}
-
-.footer .footer-icons img {
-  border-radius: 7px;
-  padding: 10px;
-  transition: 0.5s;
-}
-
-.footer .footer-icons img:hover {
-  transform: scale(1.2);
-  z-index: 1;
-  background-color: #0d0d32;
-  cursor: pointer;
-}
-
-.footer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  margin-top: -5rem;
 }
 
-.footer .footer-text {
+
+.footer-right > img{
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  margin-right: 10px;
+  margin-bottom: -20px;
+}
+
+.footer-img {
+  margin-bottom: 40px;
+}
+
+.footer-left{
+  margin-left: 55rem;
+  transform: rotate(200deg);
+}
+
+.footer-img h1 {
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.footer-child3 {
   display: flex;
+  justify-content: space-between;
+}
+.footer-child3 .footer-btn {
+  padding: 4.5rem;
 }
 
-.img-icon {
-  margin-top: 135px;
-}
-
-/* ================== Edit footer text =======================  */
-
-.footer .footer-text .quik span {
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-}
-
-.footer .footer-text .quik {
-  padding: 30px;
-  margin: 70px 70px;
-}
-
-.footer .footer-text .quik p {
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  transition: 0.9s;
-}
-
-.footer .footer-text .quik p:hover {
-  color: tomato;
-  transform: scale(1.2);
-  z-index: 1;
-}
-
-.lover-text {
-  color: rgb(0, 0, 0);
-  padding: 30px;
+.footer-below {
+  padding: 3rem;
+  background-color: var(--text-color);
+  display: flex;
   text-align: center;
+  justify-content: space-between;
+  color: var(--bg-color);
+  margin-top: -10rem;
 }
 
-.lover-text img {
-  border-radius: 50px;
+.below-text p {
+  color: #7e7e80;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-/* =========== For Resposiveness ============= */
-
-@media screen and (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer .main-img img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .footer .footer-text .quik {
-    margin: 10px 0;
-  }
-
-  .footer .footer-text .quik p {
-    font-size: 14px;
-  }
-
-  .img-icon {
-    margin-top: 10px;
-  }
-
-  .lover-text {
-    padding: 10px;
-  }
+.below-text span {
+  color: var(--bg-color);
+  margin-top: 20px;
+  font-size: 1.1rem;
 }
 
-@media (max-width: 420px) {
-  .footer-text {
-    display: flex;
-    flex-direction: column;
-  }
+.footer-icons {
+  display: flex;
+  gap: 45px;
+}
+
+.footer-icons span{
+  cursor: pointer;
 }

@@ -28,13 +28,13 @@ img{
     list-style-type: none;
 }
 
-ul li #navaa{
+#navaa{
     font-size: 1.2rem;
     position: relative;
     color: #007bff; /* Link color */
     text-decoration: none; /* Remove default underline */
 }
-ul li #navaa::before{
+#navaa::before{
     content: "";
   position: absolute;
   width: 100%;
@@ -49,7 +49,7 @@ ul li #navaa::before{
 }
 
 
-ul li #navaa:hover::before {
+#navaa:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
   }

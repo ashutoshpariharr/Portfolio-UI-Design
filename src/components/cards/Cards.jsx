@@ -1,20 +1,30 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import '../../style.css';
+import "../../style.css";
 
 const ServiceCard = () => {
   return (
-    <div className="bg-neutral-800">
-      <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll down
-        </span>
+    <div className="serviceCard">
+      <div className="service-item">
+       <span className="serviceSpan">Projects</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+          neque tenetur cupiditate explicabo ea, facere inventore, illum dolorem
+          ab rem nostrum perspiciatis mollitia saepe impedit nemo aliquid
+          aliquam minima. Doloremque.
+        </p>
       </div>
+      <br />
+     
       <HorizontalScrollCarousel />
-      <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll up
-        </span>
+      <div className="service-item">
+      {/* <span className="serviceSpan">Scroll up</span> */}
+      <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+          neque tenetur cupiditate explicabo ea, facere inventore, illum dolorem
+          ab rem nostrum perspiciatis mollitia saepe impedit nemo aliquid
+          aliquam minima. Doloremque.
+        </p>
       </div>
     </div>
   );
@@ -31,7 +41,7 @@ const HorizontalScrollCarousel = () => {
   return (
     <section ref={targetRef} className="target">
       <div className="sticky">
-        <motion.div style={{ x, display: 'flex', gap: 20 }}>
+        <motion.div style={{ x, display: "flex", gap: 20 }}>
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
@@ -42,34 +52,38 @@ const HorizontalScrollCarousel = () => {
 };
 const Card = ({ card }) => {
   return (
-    <div
-      key={card.id}
-      className="root-card"
-    >
+    <div key={card.id} className="root-card">
       <div
         className="background-image"
         style={{
           backgroundImage: `url(${card.url})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          height: "50%",
         }}
       ></div>
       <div className="content">
-        <p>
-          {card.title}
-        </p>
+        <p>{card.title}</p>
+      </div>
+      <div className="content">
+        <h2>{card.heding}</h2>
+      </div>
+      <div className="content">
+        <button className="btn">Visit</button>
+        <button className="btn">Code</button>
       </div>
     </div>
   );
 };
-
 
 export default ServiceCard;
 
 const cards = [
   {
     url: "https://images.unsplash.com/photo-1611243017235-84454d0491aa?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Title 1",
+    heding: "Thisis heding",
+    title:
+      "Title 1 This si ashutosh parhar kig h wo biajjfiejiejiijiejiejiejiejieiejeieeiie",
     id: 1,
   },
   {

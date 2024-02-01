@@ -1,52 +1,35 @@
-.button-login {
-  display: grid;
-  min-height: 200px;
-  place-content: center;
-  /* background-color: #1f2937; */
-  padding: 1rem;
-}
-
 
 .bycrypt {
     position: relative;
     overflow: hidden;
     border: 1px solid #6b7280; 
     border-radius: 8px;
-    background-color: #4b5563;
+    /* background-color: #4b5563; */
+    background-color: black;
     padding: 8px 16px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
     text-transform: uppercase;
-    color: #9ca3af;
+    /* color: #9ca3af; */
+    color: white;
     transition: color 0.3s;
+    cursor: pointer;
+    width: 100px;
   }
   
   .bycrypt:hover {
     color: #93c5fd;
   }
   
-  .relative {
+  .log-relative{
     position: relative;
-  }
-  
-  .z-10 {
     z-index: 10;
-  }
-  
-  .flex {
     display: flex;
-  }
-  
-  .items-center {
     align-items: center;
-  }
-  
-  .gap-2 {
     gap: 0.5rem;
   }
 
-
-  .movement {
+  .movement{
     duration: 300ms;
     position: absolute;
     inset: 0;
@@ -71,14 +54,7 @@
 
   /* styles.css */
 
-.button-wrapper {
-  display: flex;
-  min-height: 200px;
-  align-items: center;
-  justify-content: center;
-  /* background-color: #1f2937; */
-  padding: 0 4px;
-}
+
 
 .spotlight-button {
   position: relative;

@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../store/auth";
+import Lottie from "lottie-react";
+import animationdata from "../assets/lottie/boxing.json";
 
 export const Contact = () => {
   const [user, setUser] = useState({
@@ -62,56 +64,102 @@ export const Contact = () => {
   };
 
   return (
-    <div>
-      <p>{`Your Email ${enter ? enter.email : ""}`}</p>
-      <h1>This is the contact form</h1>
-      <div className="contact-container">
-        <div className="img-serv"></div>
-        <div className="service-form">
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              name="username"
-              autoComplete="off"
-              id="username"
-              placeholder="Username"
-              required
-              value={user.username}
-              onChange={handleInput}
-            />
+    <>
+      <div className="contact-form">
+        <div className="contact-container">
+         
+
+          <div className="service-form">
+            <p>{`Your Email ${enter ? enter.email : ""}`}</p>
+            <h1>This is the contact form</h1>
             <br />
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              autoComplete="off"
-              id="email"
-              placeholder="Email"
-              required
-              value={user.email}
-              onChange={handleInput}
-            />
             <br />
-            <label htmlFor="message">Message</label>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Message"
-              required
-              value={user.message}
-              onChange={handleInput}
-            ></textarea>
-            <br />
-            <button type="submit">Send Now</button>
-          </form>
+            <form onSubmit={handleSubmit}>
+              <div className="input-container">
+                <input
+                  type="text"
+                  name="username"
+                  autoComplete="off"
+                  className="user-input"
+                  id="username"
+                  // placeholder="Username"
+                  required
+                  value={user.username}
+                  onChange={handleInput}
+                />
+                <label className="label">Username</label>
+              </div>
+              <br />
+              <br />
+              {/* <label htmlFor="email">Email</label> */}
+              <div className="input-container">
+                <input
+                  type="email"
+                  name="email"
+                  autoComplete="off"
+                  id="email"
+                  className="user-input"
+                  // placeholder="Email"
+                  required
+                  value={user.email}
+                  onChange={handleInput}
+                />
+                <label className="label">Email</label>
+              </div>
+              <br />
+              <br />
+              {/* <label htmlFor="message">Message</label> */}
+              <div className="input-container">
+                <textarea
+                  name="message"
+                  id="contact-message"
+                  // placeholder="Message"
+                  className="user-input"
+                  required
+                  value={user.message}
+                  onChange={handleInput}
+                ></textarea>
+                <label className="label">Message</label>
+              </div>
+              <br />
+              <button type="submit" className="submit-button">
+                <span className="button-content">SEND</span>
+              </button>
+              {/* <button >Send Now</button> */}
+            </form>
+          </div>
+
+          <div className="contact-text">
+            <h1>Here We Are..</h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo vero
+              iusto fuga eum repudiandae molestiae hic ipsam earum nam error
+              temporibus nulla optio libero sunt doloribus quam maiores non
+              atque incidunt, dolore rerum perspiciatis! Labore expedita
+              inventore molestiae, amet corporis optio quod ex quas provident
+              nobis. Recusandae velit fugit nulla.
+            </p>
+            <div className="contact-lottie">
+              <Lottie animationData={animationdata} />
+            </div>
+          </div>
+
         </div>
       </div>
-      <div className="custom-shape-divider-bottom-1704551877">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
-    </svg>
-</div>
-    </div>
+
+      {/* <div className="custom-shape-divider-bottom-1706693376">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
+              className="shape-fill"
+            ></path>
+          </svg>
+        </div> */}
+    </>
   );
 };

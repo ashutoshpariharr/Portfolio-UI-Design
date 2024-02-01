@@ -1,21 +1,17 @@
 import { useRef, useState } from "react";
 import { FiLock } from "react-icons/fi";
 import { motion } from "framer-motion";
-import './Button';
+import "./Button";
 
 const Button = () => {
-  return (
-    <div className="button-login">
-      <EncryptButton />
-    </div>
-  );
+  return <EncryptButton />;
 };
 
-const TARGET_TEXT = "Click to LogIn";
-const CYCLES_PER_LETTER = 2;
+const TARGET_TEXT = "LogIn";
+const CYCLES_PER_LETTER = 3;
 const SHUFFLE_TIME = 50;
 
-const CHARS = "!@#$%^&*():{};|,.<>/?";
+const CHARS = "!@#$%^&*():{};|,.$#<>/?";
 
 const EncryptButton = () => {
   const intervalRef = useRef(null);
@@ -66,7 +62,7 @@ const EncryptButton = () => {
       onMouseLeave={stopScramble}
       className="bycrypt"
     >
-      <div className="relative z-10 flex items-center gap-2">
+      <div className="log-relative">
         <FiLock />
         <span>{text}</span>
       </div>

@@ -1,29 +1,9 @@
 /* styles.css */
 
-.bg-neutral-800 {
-    background-color: #2d3748; 
-  }
-  
-  .h-48 {
-    height: 12rem; 
-  }
-  
-  .font-semibold {
-    font-weight: 600;
-  }
-  
-  .uppercase {
-    text-transform: uppercase;
-  }
-  
-  .text-neutral-500 {
-    color: #a0aec0; 
-  }
-
   .target{
     position: relative;
     height: 300vh;
-    background-color: #2d3748; 
+    /* background-color: #2d3748;  */
   }
   
   .target .sticky {
@@ -33,7 +13,6 @@
     height: 100vh;
     align-items: center;
     overflow: hidden;
-    gap: 4;
   }
   
   section .sticky .motion{
@@ -60,22 +39,47 @@
   .root-card:hover .background-image {
     transform: scale(1.1);
   }
+
+  .content{
+    padding: 2rem;
+  }
   
   .root-card .content {
     position: absolute;
-    inset: 0;
+    display: flex;
     z-index: 10;
-    display: grid;
-    place-content: center;
   }
   
   .root-card .content p {
-    background: linear-gradient(to bottom right, #ffffff 20%, transparent 0);
-    padding: 8px;
-    font-size: 6xl;
+    margin-top: 16rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #ffffff;
-    backdrop-filter: blur(8px);
+    color: #000000;
   }
-  
+
+.root-card .content h2{
+  /* margin-top: 12.5rem; */
+}
+
+
+.root-card .content .btn{
+  background-color: red;
+  margin-top: 23rem;
+  margin-inline: 4rem;
+}
+/*!! ================== Service card Css =============  */
+
+.serviceCard{
+  padding: 5rem;
+}
+.serviceCard .serviceSpan{
+  color: #004534;
+  font-weight: 600;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.service-item{
+  padding: 3rem;
+  margin-bottom: -5rem;
+}
