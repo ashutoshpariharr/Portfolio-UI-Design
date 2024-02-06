@@ -4,6 +4,8 @@ import { useAuth } from "../store/auth";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ButtonWrapper from "../components/button/ButtonWrapper";
+import Lottie from "lottie-react";
+import animationdata from "../assets/lottie/Dog.json";
 
 const Register = () => {
   // this is for storeToken to the browser
@@ -72,17 +74,21 @@ const Register = () => {
     <div className="reg-container">
       <div className="reg-left">
         <h1>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque.
+          MERNing to Impress <br /> Join the Code Party
         </h1>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit ipsam,
-          officiis sapiente, eius assumenda qui dolorem fugiat nam nemo, quasi
-          pariatur modi! Culpa reiciendis incidunt, placeat ducimus eligendi
-          vero qui, similique quod sunt, aut velit?
+          officiis <br /> sapiente, eius assumenda qui dolorem fugiat nam nemo,
+          quasi pariatur modi! <br /> Culpa reiciendis incidunt, placeat ducimus
+          eligendi vero qui, similique <br /> quod sunt, aut velit?
         </p>
+        <div className="reg-lottie">
+          <Lottie animationData={animationdata} />
+        </div>
       </div>
       <div className="reg-right">
         <h1>Create Account</h1>
+        <p>Enter Your Personal Details</p>
         <br />
         <form onSubmit={handleSubmit}>
           <div className="reg-group">
@@ -97,10 +103,8 @@ const Register = () => {
               value={user.username}
             />
             <span className="highlight"></span>
-            <span className="bar"></span>
             <label>Name</label>
           </div>
-          <br />
           <br />
           <div className="reg-group">
             <input
@@ -108,16 +112,13 @@ const Register = () => {
               type="email"
               className="res-input"
               name="email"
-              //  placeholder="Enter Your email.."
               id="username"
               autoComplete="off"
               onChange={handleInput}
             />
             <span className="highlight"></span>
-            <span className="bar"></span>
             <label>Email</label>
           </div>
-          <br />
           <br />
           <div className="reg-group">
             <input
@@ -125,16 +126,13 @@ const Register = () => {
               className="res-input"
               type="number"
               name="phone"
-              // placeholder="Enter Your number.."
               id="username"
               autoComplete="off"
               onChange={handleInput}
             />
             <span className="highlight"></span>
-            <span className="bar"></span>
             <label>Mobile</label>
           </div>
-          <br />
           <br />
           <div className="reg-group">
             <input
@@ -142,54 +140,35 @@ const Register = () => {
               type="password"
               className="res-input"
               name="password"
-              //  placeholder="Enter Your secreat password.."
               id="username"
               autoComplete="off"
               onChange={handleInput}
             />
             <span className="highlight"></span>
-            <span className="bar"></span>
+
             <label>Password</label>
           </div>
+          <br />
+          <div className="align">
+            <p>
+              <input
+                type="checkbox"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+              />
+              <span> Terms and Conditions apply </span>
+              Remember Me For 30 Days
+            </p>
 
-          <div className="reg-group">
-
-          <div className="checkbox-wrapper">
-            <input id="terms-checkbox-37" name="checkbox" type="checkbox" />
-            <label className="terms-label" htmlFor="terms-checkbox-37">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 200 200"
-                className="checkbox-svg"
-              >
-                <mask fill="white" id="path-1-inside-1_476_5-37">
-                  <rect height="200" width="200"></rect>
-                </mask>
-                <rect
-                  mask="url(#path-1-inside-1_476_5-37)"
-                  strokeWidth="40"
-                  className="checkbox-box"
-                  height="200"
-                  width="200"
-                ></rect>
-                <path
-                  strokeWidth="15"
-                  d="M52 111.018L76.9867 136L149 64"
-                  className="checkbox-tick"
-                ></path>
-              </svg>
-              <span className="label-text">Checkbox</span>
-            </label>
-          </div>
-
+            <br />
           </div>
 
           <div className="button-wrapper">
             <ButtonWrapper />
           </div>
-          {/* <button className="btn">Register Now</button> */}
         </form>
+        <ButtonWrapper/>
       </div>
     </div>
   );

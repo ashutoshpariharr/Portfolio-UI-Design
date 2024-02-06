@@ -94,7 +94,7 @@ const Login = () => {
               <h1>Welcome, Back!</h1>
               <p>Please Enter Your Details</p>
             </div>
-
+ 
             <div className="log-inputs">
               <div className="group">
                 <svg
@@ -116,7 +116,7 @@ const Login = () => {
                   type="email"
                   name="email"
                   className="input"
-                  placeholder="Enter Your Password"
+                  placeholder="Enter Your Email"
                   id="username"
                   required
                   autoComplete="off"
@@ -141,7 +141,7 @@ const Login = () => {
                 <input
                   type="password"
                   name="password"
-                  placeholder="Enter Your email.."
+                  placeholder="Enter Your Password"
                   id="username"
                   className="input"
                   required

@@ -1,12 +1,10 @@
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { Link } from "react-router-dom";
-// import Curousel from "../components/curousel/Curousel";
-
+import { Link, NavLink } from "react-router-dom";
 import Lottie from "lottie-react";
-import animationdata from "../assets/lottie/working.json";
+import animationdata from "../assets/lottie/team.json";
+import animationdata1 from "../assets/lottie/alone-work.json";
 import Footer from "../pages/Footer";
-
-
+import { HoverImageLinks } from "../components/hero/HoverImageLinks";
 
 const Home = () => {
   return (
@@ -28,18 +26,14 @@ const Home = () => {
               </button>
             </Link>
             <Link to="/contact">
-              <button className="btn-2">
-                Hire Me{" "}
-                <span>
-                  <IoIosArrowRoundForward />
-                </span>
+              <button className="Home-button">
+                <span>Hire Me</span>
               </button>
             </Link>
           </div>
         </div>
         <div className="home-bg">
-          {/* <div className="multylayer"></div> */}
-          <Lottie animationData={animationdata} /> 
+          <Lottie animationData={animationdata} />
         </div>
       </div>
 
@@ -56,13 +50,14 @@ const Home = () => {
         </div>
       </div>
 
-     
+      <HoverImageLinks />
 
       <div className="crousel-btn">
-        {/* <button className="down-btn">VIEW MORE</button> */}
-        <button className="banner-btn">
-          <span>View More </span>
-        </button>
+        <NavLink to="/service" style={{ textDecoration: "none" }}>
+          <button className="banner-btn">
+            <span>View More</span>
+          </button>
+        </NavLink>
       </div>
 
       <div className="custom-shape-divider-bottom-1706285365">
@@ -88,76 +83,85 @@ const Home = () => {
       >
         <div className="middle-text">
           <h3 style={{ padding: "5rem" }}>
-            HERE IS THE BEST, <br /> DEVELOPER
+            Crafting Digital Excellence: MERN Stack Maestro and Visionary
+            Frontend Developer, Turning Ideas into Seamless Experiences
           </h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati
-            ipsam placeat <br /> debitis provident animi ad tenetur, neque earum
-            impedit architecto vitae eaque, <br /> ipsa molestiae adipisci,
-            laborum non voluptas fugit error suscipit. Libero deleniti vitae
-            commodi.
+            Embrace a world where innovation meets proficiency. As a Full Stack
+            Developer, I weave magic through MERN technologies, sculpting
+            dynamic websites with precision. My commitment to code craftsmanship
+            extends from robust backend architecture to captivating user
+            interfaces. Let's embark on a journey of transformative digital
+            solutions. Your vision, my expertise Together, we redefine the
+            digital landscape
           </p>
           <div className="middleBtn">
-            <button className="middleText-btn">Get In Touch</button>
+            <Link to="/contact">
+              <button className="middleText-btn">Get In Touch</button>
+            </Link>
           </div>
-        <div className="text-shadow"></div>
         </div>
 
         <div className="hero">
           <div className="left-hero">
-            <div className="waviy">
-              <span style={{ "--i": 1 }}>M</span>
+            <div className="waviy" style={{ marginLeft: "140px" }}>
+              <span style={{ "--i": 1 }}>R</span>
               <span style={{ "--i": 2 }}>E</span>
-              <span style={{ "--i": 3 }}>R</span>
-              <span style={{ "--i": 4 }}>N</span>
-              <span style={{ "--i": 5 }}>-</span>
-              <span style={{ "--i": 6 }}>S</span>
-              <span style={{ "--i": 7 }}>T</span>
-              <span style={{ "--i": 8 }}>A</span>
-              <span style={{ "--i": 9 }}>C</span>
-              <span style={{ "--i": 10 }}>K</span>
+              <span style={{ "--i": 3 }}>S</span>
+              <span style={{ "--i": 4 }}>U</span>
+              <span style={{ "--i": 5 }}>M</span>
+              <span style={{ "--i": 6 }}>E</span>
             </div>
             <br />
             <div className="absolute-text">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias tenetur,
-                <br /> eos tempora, excepturi qui quidem soluta, nesciunt sit
-                illum temporibus voluptatibus <br /> distinctio. Est nihil
-                necessitatibus facere illo molestiae fuga unde!
+                Unlock the gateway to my professional journey! This carefully
+                curated document encapsulates my skills, experiences, and
+                passion for the MERN stack. Dive into a world where innovation
+                meets efficiency, and let my journey on the MERN expressway
+                inspire your next venture. Click the button below to embark on a
+                visual voyage through my career highlights, technical prowess,
+                and unwavering commitment to excellence.
               </p>
             </div>
+            <center>
+              <h1 style={{ marginTop: "2rem" }}>Get My Resume</h1>
+              <br />
+
+              <div className="button-cv" data-tooltip="Size: 803Kb">
+                <div className="button-wrapper-cv">
+                  <div className="text-cv">Download</div>
+                  <span className="icon-cv">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      role="img"
+                      width="2em"
+                      height="2em"
+                      preserveAspectRatio="xMidYMid meet"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
+                      ></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </center>
           </div>
           <div className="right-hero">
-            <Lottie animationData={animationdata} />
+            <Lottie animationData={animationdata1} />
           </div>
         </div>
       </div>
-      {/* Third section for cv and more */}
 
-      <div className="w-full bg-slate-600"></div>
-
-      {/* <div className="container">
-        <div className="cv-right">
-          <img src="images/homeFull.jpg" alt="This is for cv UI" />
-        </div>
-        <div className="cv-left">
-          <h2>Something about me with your own oppenion</h2>
-          <br />
-          <div className="download-cv">
-            <button className="cv-download">Resume</button>
-          </div>
-        </div>
-      </div> */}
-
-      {/* <div style={testimonialStyle}>
-        <p>
-          "Your testimonial text goes here. It can be as long as you want, and
-          it will automatically wrap around in a circular shape."
-        </p>
-        <p>- Testimonial Author</p>
-      </div> */}
-       <Footer />
+      <Footer />
     </div>
   );
 };

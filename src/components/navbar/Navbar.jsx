@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../../store/auth";
+import Magnetic from "../social/Magnetic";
 
 export const Navbar = () => {
   const { isLoggedIn } = useAuth();
@@ -17,87 +18,101 @@ export const Navbar = () => {
           <nav>
             <ul className="remove-li">
               <li>
-                <NavLink
-                  id="navaa"
-                  to="/"
-                  style={({ isActive }) => ({
-                    color: isActive ? "greenyellow" : "black",
-                  })}
-                >
-                  Home
-                </NavLink>
+                <Magnetic>
+                  <NavLink
+                    id="navaa"
+                    to="/"
+                    style={({ isActive }) => ({
+                      color: isActive ? "#007bff" : "black",
+                    })}
+                  >
+                    Home
+                  </NavLink>
+                </Magnetic>
               </li>
 
               <li>
-                <NavLink
-                  id="navaa"
-                  to="/about"
-                  style={({ isActive }) => ({
-                    color: isActive ? "greenyellow" : "black",
-                  })}
-                >
-                  About
-                </NavLink>
+                <Magnetic>
+                  <NavLink
+                    id="navaa"
+                    to="/about"
+                    style={({ isActive }) => ({
+                      color: isActive ? "#007bff" : "black",
+                    })}
+                  >
+                    About
+                  </NavLink>
+                </Magnetic>
               </li>
 
               <li>
-                <NavLink
-                  id="navaa"
-                  to="/service"
-                  style={({ isActive }) => ({
-                    color: isActive ? "greenyellow" : "black",
-                  })}
-                >
-                  Service
-                </NavLink>
+                <Magnetic>
+                  <NavLink
+                    id="navaa"
+                    to="/service"
+                    style={({ isActive }) => ({
+                      color: isActive ? "#007bff" : "black",
+                    })}
+                  >
+                    Service
+                  </NavLink>
+                </Magnetic>
               </li>
 
               <li>
-                <NavLink
-                  id="navaa"
-                  to="/contact"
-                  style={({ isActive }) => ({
-                    color: isActive ? "greenyellow" : "black",
-                  })}
-                >
-                  Contact
-                </NavLink>
+                <Magnetic>
+                  <NavLink
+                    id="navaa"
+                    to="/contact"
+                    style={({ isActive }) => ({
+                      color: isActive ? "#007bff" : "black",
+                    })}
+                  >
+                    Contact
+                  </NavLink>
+                </Magnetic>
               </li>
               {isLoggedIn ? (
                 <li>
-                  <NavLink
-                    id="navaa"
-                    to="/logout"
-                    style={({ isActive }) => ({
-                      color: isActive ? "greenyellow" : "black",
-                    })}
-                  >
-                    Logout
-                  </NavLink>
+                  <Magnetic>
+                    <NavLink
+                      id="navaa"
+                      to="/logout"
+                      style={({ isActive }) => ({
+                        color: isActive ? "#007bff" : "black",
+                      })}
+                    >
+                      Logout
+                    </NavLink>
+                  </Magnetic>
                 </li>
               ) : (
                 <>
                   <li>
-                    <NavLink
-                      id="navaa"
-                      to="/login"
-                      style={({ isActive }) => ({
-                        color: isActive ? "greenyellow" : "black",
-                      })}
-                    >
-                      Login
-                    </NavLink>
+                    <Magnetic>
+                      <NavLink
+                        id="navaa"
+                        to="/login"
+                        style={({ isActive }) => ({
+                          color: isActive ? "#007bff" : "black",
+                        })}
+                      >
+                        Login
+                      </NavLink>
+                    </Magnetic>
                   </li>
                   <li>
-                    <NavLink
-                      id="navaa"
-                      to="/register"
-                      style={({ isActive }) => ({
-                        color: isActive ? "greenyellow" : "black",
-                      })}
-                    >
-                      Register
-                    </NavLink>
+                    <Magnetic>
+                      <NavLink
+                        id="navaa"
+                        to="/register"
+                        style={({ isActive }) => ({
+                          color: isActive ? "#007bff" : "black",
+                        })}
+                      >
+                        Register
+                      </NavLink>
+                    </Magnetic>
                   </li>
                 </>
               )}
