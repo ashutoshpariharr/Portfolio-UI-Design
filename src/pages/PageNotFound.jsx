@@ -1,8 +1,18 @@
 import { NavLink } from "react-router-dom";
 import Lottie from 'lottie-react';
 import animationData from "../assets/lottie/404.json";
+import { useEffect } from "react";
 
-const PageNotFound = () => {
+const PageNotFound = ({ setProgress }) => {
+
+  useEffect(() => {
+    setProgress(80)
+    setTimeout(() => {
+      setProgress(100)
+    }, 2000);
+  }, [])
+
+
   return (
     <div>
       <div className="content">

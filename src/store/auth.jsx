@@ -6,9 +6,7 @@ export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
 
   const [enter, setEnter] = useState("");
-
-  // const authorizationToken =  token;
-
+  const [isLoding, setIsLoding] = useState(true);
 
   //Store token in the browser.
   const storeTokenInLS = (serverToken) => {
@@ -19,51 +17,58 @@ export const AuthProvider = ({ children }) => {
   // use a logout functionalty in logout page.
   const LogoutUser = () => {
     setToken("");
-    localStorage.removeItem('token');
+    localStorage.removeItem("token");
   };
 
   let isLoggedIn = !!token;
-  // console.log("is Logged in", isLoggedIn);
-
-  //  Authentication in store data contact page after login.
 
   const userAuthentication = async () => {
     try {
+      // Retrieve token from local storage
+
+      const token = localStorage.getItem("token");
+      // console.log("Token:", token);
+
+      setIsLoding(true);
+
       const response = await fetch("http://localhost:5000/api/auth/user", {
         method: "GET",
         headers: {
-          Authorization: token,
+          Authorization: `Bearer ${token}`,
         },
       });
+      // userAuthentication()
 
       if (response.ok) {
         const data = await response.json();
-        console.log("userdata", data.userData);
-        setEnter(data.userData);
+        setEnter(data.msg);
+        setIsLoding(false);
+      } else {
+        setIsLoding(false);
       }
     } catch (error) {
-      console.log(error, "This is error from userAthentication");
+      console.log(error, "This is error from userAuthentication");
     }
   };
 
   // This is fetch data from database using api and destribute in service form
 
   const [service, setService] = useState([]);
-  
+
   const getServices = async () => {
     try {
       const response = await fetch("http://localhost:5000/api/data/service", {
         method: "GET",
       });
-  
+
       if (response.ok) {
         const data = await response.json();
         // console.log(data);
-  
+
         // Assuming 'response' contains the services array
         setService(data.response || []);
-  
-        console.log("Response fetch successfully from services");
+
+        // console.log("Response fetch successfully from services");
       } else {
         console.log("Failed to fetch services");
       }
@@ -71,20 +76,23 @@ export const AuthProvider = ({ children }) => {
       console.log(`Error fetching services: ${error}`);
     }
   };
-  
-  
-  
-  
-  
+
   useEffect(() => {
     getServices();
     userAuthentication();
   }, []);
-  
 
   return (
     <AuthContext.Provider
-      value={{ isLoggedIn, storeTokenInLS, LogoutUser, enter, service, token }}
+      value={{
+        isLoggedIn,
+        storeTokenInLS,
+        LogoutUser,
+        enter,
+        service,
+        token,
+        isLoding,
+      }}
     >
       {children}
     </AuthContext.Provider>

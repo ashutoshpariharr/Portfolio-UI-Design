@@ -88,7 +88,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: 0.5s;
-  border: 1px solid black;
+  border: 1px solid #4681f4;
   background: none;
 }
 .btns button:hover {
@@ -98,7 +98,7 @@
   box-shadow: 0 0 8px #4681f4;
 }
 #navaa {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
@@ -136,6 +136,7 @@
 .footer-right > img {
   aspect-ratio: 1/1;
   object-fit: cover;
+  width: 100px;
   margin-right: 10px;
   margin-bottom: -20px;
 }
@@ -174,7 +175,19 @@
   text-align: center;
   justify-content: space-between;
   color: var(--bg-color);
+  /* margin-top: -10rem; */
+}
+.below-text-social {
+  padding: 3rem;
+  background-color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  align-items: center;
+  justify-content: space-between;
+  color: var(--bg-color);
   margin-top: -10rem;
+  width: 100%;
 }
 
 .below-text p {
@@ -182,6 +195,24 @@
   font-size: 1rem;
   margin-bottom: 1rem;
   font-weight: 600;
+}
+
+/* media quary for responsiveness */
+
+@media (max-width: 950px){
+  .footer-below{
+    font-size: 0.8rem;
+  }
+  .below-text{
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-below{
+    height: 5vh;
+  }
 }
 
 

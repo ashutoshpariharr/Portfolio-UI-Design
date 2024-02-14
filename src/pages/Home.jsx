@@ -5,12 +5,29 @@ import animationdata from "../assets/lottie/team.json";
 import animationdata1 from "../assets/lottie/alone-work.json";
 import Footer from "../pages/Footer";
 import { HoverImageLinks } from "../components/hero/HoverImageLinks";
+import { motion } from "framer-motion";
+import { Section } from "../components/social/TextAni";
+// import resume from "../../public/images/chambal";
 
 const Home = () => {
+  // const element = useRef(null);
+  // const { scrollYProgress } = useScroll({
+  //   target: element,
+  //   offset: ["start 0.9", "start 0.25"],
+  // });
+
+  // useEffect(() => {
+  //   scrollYProgress.on("change", (e) => console.log(e));
+  // }, []);
+
   return (
     <div>
       <div className="container">
-        <div className="home-content">
+        <motion.div
+          animate={{ x: 120 }}
+          transition={{ type: "spring", stiffness: 100, damping: 3 }}
+          className="home-content"
+        >
           <p>UI/UX DESIGNER, DEVELOPER</p>
           <h1>
             I'M, <br />
@@ -31,10 +48,17 @@ const Home = () => {
               </button>
             </Link>
           </div>
-        </div>
-        <div className="home-bg">
+        </motion.div>
+
+        <motion.div
+          className="home-bg-lotti"
+          initial={{ opacity: 0, x: -100, y: -100 }}
+          transition={{ type: "spring", damping: 3 }}
+          animate={{ opacity: 1, x: 50, y: 50 }}
+          exit={{ opacity: 0 }}
+        >
           <Lottie animationData={animationdata} />
-        </div>
+        </motion.div>
       </div>
 
       {/* This is marque text flow  */}
@@ -50,17 +74,28 @@ const Home = () => {
         </div>
       </div>
 
-      <HoverImageLinks />
+      <Section>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "spring" }}
+          className="hover-hero-section"
+        >
+          <HoverImageLinks />
+        </motion.div>
+      </Section>
 
-      <div className="crousel-btn">
-        <NavLink to="/service" style={{ textDecoration: "none" }}>
-          <button className="banner-btn">
-            <span>View More</span>
-          </button>
-        </NavLink>
-      </div>
+      <Section>
+        <div className="crousel-btn">
+          <NavLink to="/service" style={{ textDecoration: "none" }}>
+            <button className="banner-btn">
+              <span>View More</span>
+            </button>
+          </NavLink>
+        </div>
+      </Section>
 
-      <div className="custom-shape-divider-bottom-1706285365">
+      <div className="home-waves">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -75,90 +110,111 @@ const Home = () => {
       </div>
 
       <div
-        className="hight"
+        className="hight-bgColor"
         style={{
           backgroundColor: "#F9BCAC",
           marginTop: "18rem",
         }}
       >
         <div className="middle-text">
-          <h3 style={{ padding: "5rem" }}>
-            Crafting Digital Excellence: MERN Stack Maestro and Visionary
-            Frontend Developer, Turning Ideas into Seamless Experiences
-          </h3>
-          <p>
-            Embrace a world where innovation meets proficiency. As a Full Stack
-            Developer, I weave magic through MERN technologies, sculpting
-            dynamic websites with precision. My commitment to code craftsmanship
-            extends from robust backend architecture to captivating user
-            interfaces. Let's embark on a journey of transformative digital
-            solutions. Your vision, my expertise Together, we redefine the
-            digital landscape
-          </p>
-          <div className="middleBtn">
-            <Link to="/contact">
-              <button className="middleText-btn">Get In Touch</button>
-            </Link>
-          </div>
+          {/* <motion.h3
+            ref={element}
+            style={{ opacity: scrollYProgress, padding: "5rem" }}
+          > */}
+          <Section>
+            <motion.h1
+              animate={{ x: 170 }}
+              transition={{ duration: 2, type: "tween" }}
+              className="h3-heding"
+            >
+              Crafting Digital Excellence: MERN Stack Maestro and Visionary
+              Frontend Developer, Turning Ideas into Seamless Experiences
+            </motion.h1>
+          </Section>
+          <br />
+          {/* </motion.h3> */}
+
+          <Section>
+            <p>
+              Embrace a world where innovation meets proficiency. As a Full
+              Stack Developer, I weave magic through MERN technologies,
+              sculpting dynamic websites with precision. My commitment to code
+              craftsmanship extends from robust backend architecture to
+              captivating user interfaces. Let's embark on a journey of
+              transformative digital solutions. Your vision, my expertise
+              Together, we redefine the digital landscape
+            </p>
+          </Section>
+          <Section>
+            <div className="middleBtn">
+              <Link to="/contact">
+                <button className="middleText-btn">Get In Touch</button>
+              </Link>
+            </div>
+          </Section>
         </div>
 
-        <div className="hero">
-          <div className="left-hero">
-            <div className="waviy" style={{ marginLeft: "140px" }}>
-              <span style={{ "--i": 1 }}>R</span>
-              <span style={{ "--i": 2 }}>E</span>
-              <span style={{ "--i": 3 }}>S</span>
-              <span style={{ "--i": 4 }}>U</span>
-              <span style={{ "--i": 5 }}>M</span>
-              <span style={{ "--i": 6 }}>E</span>
-            </div>
-            <br />
-            <div className="absolute-text">
-              <p>
-                Unlock the gateway to my professional journey! This carefully
-                curated document encapsulates my skills, experiences, and
-                passion for the MERN stack. Dive into a world where innovation
-                meets efficiency, and let my journey on the MERN expressway
-                inspire your next venture. Click the button below to embark on a
-                visual voyage through my career highlights, technical prowess,
-                and unwavering commitment to excellence.
-              </p>
-            </div>
-            <center>
-              <h1 style={{ marginTop: "2rem" }}>Get My Resume</h1>
-              <br />
-
-              <div className="button-cv" data-tooltip="Size: 803Kb">
-                <div className="button-wrapper-cv">
-                  <div className="text-cv">Download</div>
-                  <span className="icon-cv">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      role="img"
-                      width="2em"
-                      height="2em"
-                      preserveAspectRatio="xMidYMid meet"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                      ></path>
-                    </svg>
-                  </span>
-                </div>
+        <Section>
+          <div className="hero">
+            <div className="left-hero">
+              <div className="waviy" style={{ marginLeft: "140px" }}>
+                <span style={{ "--i": 1 }}>R</span>
+                <span style={{ "--i": 2 }}>E</span>
+                <span style={{ "--i": 3 }}>S</span>
+                <span style={{ "--i": 4 }}>U</span>
+                <span style={{ "--i": 5 }}>M</span>
+                <span style={{ "--i": 6 }}>E</span>
               </div>
-            </center>
+              <br />
+              <div className="absolute-text">
+                <p>
+                  Unlock the gateway to my professional journey! This carefully
+                  curated document encapsulates my skills, experiences, and
+                  passion for the MERN stack. Dive into a world where innovation
+                  meets efficiency, and let my journey on the MERN expressway
+                  inspire your next venture. Click the button below to embark on
+                  a visual voyage through my career highlights, technical
+                  prowess, and unwavering commitment to excellence.
+                </p>
+              </div>
+              <center>
+                <h1 style={{ marginTop: "2rem" }}>Get My Resume</h1>
+                <br />
+
+                {/* <a href={resume} download={Image}> */}
+                  <div className="button-cv" data-tooltip="Size: 803Kb">
+                    <div className="button-wrapper-cv">
+                      <div className="text-cv">Download</div>
+                      <span className="icon-cv">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                          role="img"
+                          width="2em"
+                          height="2em"
+                          preserveAspectRatio="xMidYMid meet"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                {/* </a> */}
+              </center>
+            </div>
+            <div className="right-hero">
+              <Lottie animationData={animationdata1} />
+            </div>
           </div>
-          <div className="right-hero">
-            <Lottie animationData={animationdata1} />
-          </div>
-        </div>
+        </Section>
       </div>
 
       <Footer />

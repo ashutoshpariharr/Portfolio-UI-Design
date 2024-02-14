@@ -2,8 +2,27 @@ import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../../store/auth";
 import Magnetic from "../social/Magnetic";
+import { motion } from "framer-motion";
+import { IoIosArrowDown } from "react-icons/io";
 
 export const Navbar = () => {
+  const varint = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5, // Delay between each child
+        delayChildren: 0.5, // Delay before children start animating
+        staggerDirection: 1, // Reverse order
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  };
+
   const { isLoggedIn } = useAuth();
   return (
     <div>
@@ -16,8 +35,13 @@ export const Navbar = () => {
           </div> */}
 
           <nav>
-            <ul className="remove-li">
-              <li>
+            <motion.ul
+              className="remove-li"
+              variants={varint}
+              initial="hidden"
+              animate="show"
+            >
+              <motion.li variants={item}>
                 <Magnetic>
                   <NavLink
                     id="navaa"
@@ -29,9 +53,9 @@ export const Navbar = () => {
                     Home
                   </NavLink>
                 </Magnetic>
-              </li>
+              </motion.li>
 
-              <li>
+              <motion.li variants={item}>
                 <Magnetic>
                   <NavLink
                     id="navaa"
@@ -43,9 +67,9 @@ export const Navbar = () => {
                     About
                   </NavLink>
                 </Magnetic>
-              </li>
+              </motion.li>
 
-              <li>
+              <motion.li variants={item}>
                 <Magnetic>
                   <NavLink
                     id="navaa"
@@ -54,12 +78,12 @@ export const Navbar = () => {
                       color: isActive ? "#007bff" : "black",
                     })}
                   >
-                    Service
+                    Projects
                   </NavLink>
                 </Magnetic>
-              </li>
+              </motion.li>
 
-              <li>
+              <motion.li variants={item}>
                 <Magnetic>
                   <NavLink
                     id="navaa"
@@ -71,9 +95,9 @@ export const Navbar = () => {
                     Contact
                   </NavLink>
                 </Magnetic>
-              </li>
+              </motion.li>
               {isLoggedIn ? (
-                <li>
+                <motion.li variants={item}>
                   <Magnetic>
                     <NavLink
                       id="navaa"
@@ -82,13 +106,14 @@ export const Navbar = () => {
                         color: isActive ? "#007bff" : "black",
                       })}
                     >
-                      Logout
+                      Logout   
+                      <IoIosArrowDown />
                     </NavLink>
                   </Magnetic>
-                </li>
+                </motion.li>
               ) : (
                 <>
-                  <li>
+                  <motion.li variants={item}>
                     <Magnetic>
                       <NavLink
                         id="navaa"
@@ -100,8 +125,8 @@ export const Navbar = () => {
                         Login
                       </NavLink>
                     </Magnetic>
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li variants={item}>
                     <Magnetic>
                       <NavLink
                         id="navaa"
@@ -113,10 +138,10 @@ export const Navbar = () => {
                         Register
                       </NavLink>
                     </Magnetic>
-                  </li>
+                  </motion.li>
                 </>
               )}
-            </ul>
+            </motion.ul>
           </nav>
         </div>
       </header>

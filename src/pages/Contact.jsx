@@ -2,8 +2,11 @@ import { useState, useEffect } from "react";
 import { useAuth } from "../store/auth";
 import Lottie from "lottie-react";
 import animationdata from "../assets/lottie/boxing.json";
+import { motion } from "framer-motion";
+import SocialIcon from "../components/social/SocialIcon";
+import { toast } from "react-toastify";
 
-export const Contact = () => {
+export const Contact = ({ setProgress }) => {
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -11,6 +14,15 @@ export const Contact = () => {
   });
 
   const { enter } = useAuth();
+
+  // progreess bar
+
+  useEffect(() => {
+    setProgress(90)
+    setTimeout(() => {
+      setProgress(100)
+    }, 2000)
+  }, [])
 
   // If the user is logged in, pre-fill the form fields with user data
   useEffect(() => {
@@ -21,6 +33,7 @@ export const Contact = () => {
         message: "",
       });
     }
+    enter
   }, [enter]);
 
   const handleInput = (e) => {
@@ -49,14 +62,14 @@ export const Contact = () => {
       console.log(response);
 
       if (response.ok) {
-        alert(`Your message sent successfully ${enter.username} to the admin`);
-
-        // Clear the form fields on successful submission
+        toast.success(`Your Message Sent Successfully!!`)
         setUser({
           username: "",
           email: "",
           message: "",
         });
+      }else{
+        toast.error("Faild To Send Message..")
       }
     } catch (error) {
       console.log("Error", error);
@@ -66,12 +79,10 @@ export const Contact = () => {
   return (
     <>
       <div className="contact-form">
-        <div className="contact-container">
-         
-
+        <motion.div animate={{ y: 100 }} className="contact-container">
           <div className="service-form">
             <p>{`Your Email ${enter ? enter.email : ""}`}</p>
-            <h1>This is the contact form</h1>
+            <h1>Let's Make Waves in the Digital Realm!</h1>
             <br />
             <br />
             <form onSubmit={handleSubmit}>
@@ -130,36 +141,30 @@ export const Contact = () => {
           </div>
 
           <div className="contact-text">
-            <h1>Here We Are..</h1>
+            <h1>Let's Connect and Create Something Amazing Together!</h1>
+            <br />
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo vero
-              iusto fuga eum repudiandae molestiae hic ipsam earum nam error
-              temporibus nulla optio libero sunt doloribus quam maiores non
-              atque incidunt, dolore rerum perspiciatis! Labore expedita
-              inventore molestiae, amet corporis optio quod ex quas provident
-              nobis. Recusandae velit fugit nulla.
+              Ready to turn your ideas into reality? Whether you have a project
+              in mind, a question to ask, or simply want to say hello, I'm here
+              and eager to hear from you!
+              <br />
+              <br />
+              Drop me a message and let's start a conversation. Together, we can
+              craft innovative solutions, bring your visions to life, and make
+              magic happen in the digital world. <br />
+              <br />
+              Don't hesitate—reach out today and let's embark on an exciting
+              journey of collaboration and creativity!
             </p>
-            <div className="contact-lottie">
+            <div className="contact-lottie" style={{ display: 'flex', gap: '40px'}}>
               <Lottie animationData={animationdata} />
+              <SocialIcon />
             </div>
           </div>
-
-        </div>
+        </motion.div>
       </div>
 
-      {/* <div className="custom-shape-divider-bottom-1706693376">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
-              className="shape-fill"
-            ></path>
-          </svg>
-        </div> */}
+    
     </>
   );
 };

@@ -4,12 +4,10 @@
   display: flex;
   justify-content: space-between;
   height: 1px;
-  background: transparent;
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
   background-color: white;
 }
-
 
 ul {
   display: flex;
@@ -20,11 +18,11 @@ ul {
   font-family: "Itim", cursive;
 }
 
-img {
+/* img {
   width: 100px;
   border-radius: 10px;
   margin-top: -30px;
-}
+} */
 
 .remove-li {
   list-style-type: none;

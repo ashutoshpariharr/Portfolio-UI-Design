@@ -2,13 +2,10 @@
 /* ======== This is home text animation css ======== */
 
 .waviy {
-  /* position: relative; */
-  /* text-align: center; */
   align-items: center;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
   font-size: 60px;
   display: flex;
-  /* margin-top: 120px; */
 }
 .waviy span {
   font-family: "Alfa Slab One", cursive;
@@ -41,11 +38,10 @@
 }
 
 .home-content {
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
   color: var(--text-color);
   display: flex;
-  /* align-items: center; */
-  margin-left: 6.5rem;
+  margin-top: 5rem;
   flex-direction: column;
   justify-content: center;
 }
@@ -97,11 +93,85 @@
   opacity: 1;
   transform: rotate(0deg);
 }
+.about-information {
+  width: 60%;
+  text-align: center;
+}
 
-.home-bg {
+.home-bg-lotti {
+  width: 38rem;
+}
+.home-about {
   background-color: #d5c455;
   width: 38rem;
-  /* width: 20%; */
+}
+/* about section */
+
+@media (max-width: 1100px) {
+  .home-about {
+    /* width: 70rem; */
+    width: 30rem;
+  }
+  .home-content h1 {
+    font-size: 3rem;
+  }
+  .home-content p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-content > span {
+    text-align: left;
+  }
+}
+
+@media (max-width: 877px) {
+  .home-about {
+    display: none;
+  }
+  .home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35rem;
+  }
+  .home-content span {
+    text-align: left;
+    width: 35rem;
+  }
+}
+
+/* Add media quary for responsiveness */
+
+@media only screen and (max-width: 992px) {
+  .home-bg-lotti {
+    width: 20rem;
+    margin-left: 4rem;
+  }
+  .home-content h1 {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .home-bg-lotti {
+    width: 25rem;
+    margin-left: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    /* margin-top: -5rem; */
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin-left: 7rem;
+  }
 }
 
 /* Recently btn  */
@@ -109,7 +179,6 @@
 .Home-button {
   display: inline-block;
   border-radius: 4px;
-  /* background-color: #3d405b; */
   background-color: #f7ce85;
   border: none;
   color: #ffffff;
@@ -148,9 +217,7 @@
 }
 
 .multylayer {
-  /* width: 30%; */
   height: 100vh;
-  /* position: absolute; */
   background-image: url("images/image.png");
   background-size: cover;
   background-size: 45% 120%;
@@ -162,43 +229,26 @@
 
 /* This is second layer of home section */
 
-/* .text-shadow {
-  background-color: #e2e2e2;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  position: absolute;
-  margin: 6rem 0;
-  margin-left: -8rem;
-  box-shadow: 0 0 20rem#e6cacd;
-} */
-
 .hero {
   padding: 6rem;
-  /* margin-top: 20rem; */
   display: flex;
   justify-content: space-between;
   color: #004534;
 }
 
 .left-hero {
-  /* border: 2px solid red; */
   padding: 1.5rem;
   width: 40rem;
 }
 
 .right-hero {
-  /* border: 2px solid red; */
-  /* margin-top: -17rem; */
   width: 30rem;
 }
 
 .absolute-text {
-  /* position: relative; */
   text-align: center;
   margin-top: 2rem;
   font-size: 0.8rem;
-  /* align-items: center; */
 }
 
 /* Home page thired layer */
@@ -213,7 +263,6 @@
 
 .infinity-text {
   white-space: nowrap;
-  /* position: relative; */
   font-size: 2rem;
   color: var(--text-color);
   animation: marquee 30s linear infinite;
@@ -225,6 +274,26 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+/* Responsciveness for hero hover */
+
+@media (max-width: 1000px) {
+  .infinity-text-container {
+    width: 70rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .hover-hero-section {
+    width: 70rem;
+  }
+  .home-bg-lotti {
+    width: 25rem;
+  }
+  .footer-below {
+    width: 70rem;
   }
 }
 
@@ -350,25 +419,34 @@
 
 .constomer-satisfaction {
   display: flex;
+  flex-wrap: wrap;
   padding: 5px;
   padding-right: 50px;
 }
 
-.constomer-satisfaction .cos-1 {
-  width: 50%;
-  color: #d5c455;
+.constomer-satisfaction .cos-2 {
+  width: 100%;
+  padding: 3rem;
+  padding-inline: 4rem;
+  margin-left: 3.5rem;
 }
-.constomer-satisfaction .cos-1 h2 {
+
+/* .constomer-satisfaction .cos-1 h2 {
   display: flex;
   align-items: center;
-  margin-top: 8rem;
   justify-content: center;
-}
-.constomer-satisfaction .cos-2 {
-  width: 50%;
-}
+} */
+
 .constomer-satisfaction .cos-2 p {
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 630px) {
+  .cos-2 p {
+    width: 20rem;
+    /* padding-right: 3rem; */
+    padding-left: -9rem;
+  }
 }
 
 /* ? This is crousel css */
@@ -458,16 +536,15 @@
 
 /* ? This is svg css */
 
-.custom-shape-divider-bottom-1706285365 {
+.home-waves {
   position: absolute;
-  /* bottom: 0; */
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
 }
 
-.custom-shape-divider-bottom-1706285365 svg {
+.home-waves svg {
   position: relative;
   display: block;
   width: calc(222% + 1.3px);
@@ -475,8 +552,29 @@
   transform: rotateY(180deg);
 }
 
-.custom-shape-divider-bottom-1706285365 .shape-fill {
+.home-waves .shape-fill {
   fill: #f9bcac;
+}
+
+@media (max-width: 1050px) {
+  .home-waves {
+    width: 70rem;
+  }
+  .hight-bgColor {
+    width: 70rem;
+  }
+  .footer-svg-border {
+    display: none;
+  }
+  .footer-container {
+    width: 70rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer-left {
+    display: none;
+  }
 }
 
 /** This is btn css */
@@ -533,11 +631,13 @@
   justify-content: center;
 }
 
-.middle-text h3 {
+.h3-heding {
   font-family: "Island Moments", cursive;
   font-size: 4.2rem;
+  width: 80%;
   display: flex;
-  /* align-items: center; */
+  align-items: center;
+  justify-content: center;
   justify-content: center;
   text-align: center;
   color: #004534;
@@ -616,39 +716,52 @@
 
 .skill-item {
   padding: 3rem;
+  width: 35%;
 }
 
 .skill-item hr {
   margin-bottom: 1rem;
 }
-/* This is techniqal skills field */
-.techniqal-skill {
-  padding: 5rem;
-}
-
-.progress-bar {
-  width: 100%;
-  background-color: red;
-  border-radius: 10px;
-  text-align: center;
-  color: #e2e2e2;
-  font-size: 1.2rem;
-}
-
-.flex {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-}
 
 /* soft skills */
 
 .soft-skills {
-  padding: 5rem;
-  border: 1 solid black;
+  padding: 6rem;
 }
 .clas {
   text-align: center;
+  font-size: 2.5rem;
+}
+
+/* This is for responsiveness */
+
+@media (max-width: 1000px) {
+  .skill-cards:last-child {
+    align-items: center;
+    flex-direction: column;
+    width: 40rem;
+    padding: none;
+    margin: none;
+  }
+  .skill-item {
+    width: 50rem;
+    /* height: 5rem; */
+  }
+}
+
+@media (max-width: 790px) {
+  .soft-skills {
+    width: 50rem;
+  }
+  .clas h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .middleBtn .middleText-btn {
+    margin-left: 40rem;
+  }
 }
 
 /** This is Expirence section */
@@ -657,13 +770,31 @@
   padding: 3rem;
   padding-inline: 5rem;
   display: flex;
-  /* justify-content: space-between; */
+}
+
+.expireance-left {
+  width: 90rem;
+}
+
+.expireance-right {
+  padding: 2rem;
 }
 
 .expireance-right > img {
   width: 50px;
   margin-block: 1.5rem;
   transform: rotate(90deg);
+}
+
+/* media quary for expirenace section*/
+
+@media (max-width: 600px) {
+  .expireance {
+    width: 70rem;
+  }
+  .expireance-left {
+    display: none;
+  }
 }
 
 /* !! ========= This is Service Section CSS ============ */
@@ -674,17 +805,44 @@
   justify-content: center;
   padding: 2rem;
   margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.services-card-img > img {
+  width: 80px;
 }
 
 .service-container {
   padding: 5rem;
-  background-color: #e6e6e6;
-  box-shadow: 0 0 2rem;
+  background-color: rgb(243, 240, 234);
+  box-shadow: 0 0 2rem rgb(231, 221, 202);
 }
 
 .services-card {
-  border: 2px solid red;
+  box-shadow: 0 0 10px rgb(231, 221, 202);
+  margin-block: 2rem;
   padding: 2rem;
+  width: 30%;
+  height: 16rem;
+}
+
+.service-costomer {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+@media (max-width: 1000px) {
+}
+
+/* this is for resoponsiveness */
+
+@media (max-width: 700px) {
+  .service-costomer {
+    font-size: 1rem;
+    /* margin-top: 5rem; */
+    padding: 2rem;
+  }
 }
 
 /* !! ========== This is contact form css ========== */
@@ -704,7 +862,6 @@
   align-items: center;
 }
 
-/* .contact-container { */
 .service-form {
   text-align: center;
   padding: 3rem;
@@ -716,10 +873,17 @@
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
+@media (max-width: 600px) {
+  .service-form > h1 {
+    font-size: 1.3rem;
+  }
+}
+
 .contact-container {
   width: 74%;
   height: 100vh;
-  margin-top: 10rem;
+  margin-top: -12.6rem;
+  /* margin-top: 10rem; */
   display: flex;
   justify-content: space-between;
   backdrop-filter: blur(14px) saturate(109%);
@@ -730,7 +894,31 @@
 }
 
 .contact-text {
-  padding: 5rem;
+  padding: 3rem;
+  width: 140rem;
+}
+
+.contact-text h1 {
+  font-size: 1.4rem;
+}
+
+.contact-text p {
+  font-size: 0.7rem;
+}
+
+.button-card {
+  margin-top: 20rem;
+}
+
+/* this is for resoponsiveness */
+
+@media (max-width: 1000px) {
+  .contact-text {
+    display: none;
+  }
+  .service-form {
+    height: 70vh;
+  }
 }
 
 /* inputs */
@@ -834,12 +1022,11 @@
 /* !! ============= Log in CSS ============== */
 
 .log-container {
-  padding: 5rem;
+  padding: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  /* border-radius: 15rem; */
 }
 
 .log-right {
@@ -847,13 +1034,11 @@
   padding: 4rem;
   height: 90vh;
   border-radius: 1.5rem;
-  /* border: 2px solid red; */
   background-color: rgb(205, 205, 205);
   box-shadow: 0 0 30px rgb(205, 205, 205);
 }
 
 .log-reg {
-  /* border: 2px solid red; */
   box-shadow: 0 0 20px #e2e2e2;
   width: 40%;
   height: 90vh;
@@ -867,17 +1052,14 @@
   line-height: 30px;
   align-items: center;
   position: relative;
-  /* max-width: 200px; */
 }
 
 .input {
-  /* width: 100%; */
   height: 45px;
   line-height: 30px;
   padding: 0 5rem;
   border-color: rgba(129, 140, 248);
   padding-left: 3rem;
-  /* border: 2px solid transparent; */
   border-radius: 10px;
   outline: none;
   background-color: #f8fafc;
@@ -913,7 +1095,7 @@ input:hover {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 .log-inputs {
@@ -922,7 +1104,6 @@ input:hover {
 
 .button-login {
   padding: 2rem;
-  /* width: 200%; */
   text-align: center;
 }
 
@@ -933,6 +1114,30 @@ input:hover {
 .log-link span {
   color: red;
   text-decoration: none;
+}
+
+/* This is for media quarys */
+
+@media (max-width: 1000px) {
+  .log-lottie {
+    width: 10rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .log-right {
+    display: none;
+  }
+
+  .log-reg {
+    width: 70rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .log-heding {
+    font-size: 0.7rem;
+  }
 }
 
 /* ! ======== This is Register file CSS ============ */
@@ -1014,7 +1219,6 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: 50vh; */
   width: 100%;
 }
 
@@ -1022,13 +1226,14 @@ label {
   width: 40%;
   height: 94vh;
   border-radius: 2rem 0 0 2rem;
-  padding: 2rem;
+  padding: 3rem;
   background-color: #5264ae;
   box-shadow: 0 0 20px #5264ae;
   margin-right: -2.7rem;
 }
 .reg-left h1 {
   color: white;
+  font-size: 1.5rem;
 }
 .reg-left p {
   font-size: 0.8rem;
@@ -1040,6 +1245,26 @@ label {
   box-shadow: 0 0 20px #e2e2e2;
   border-radius: 3rem 0rem 0rem 3rem;
   text-align: center;
+  height: 95vh;
+  margin-left: -4rem;
+}
+
+.reg-log {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reg-log .Navlink > button {
+  width: 20.3rem;
+  background-color: #1e293b;
+  color: rgb(212, 200, 178);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.Navlink {
+  text-decoration: none;
 }
 
 .align {
@@ -1056,33 +1281,67 @@ label {
   cursor: not-allowed;
 }
 
+/* this is for resoponsiveness */
+
+@media (max-width: 1000px) {
+  .button-wrapper {
+    width: auto;
+  }
+  .reg-log .Navlink > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    font-size: 1rem;
+    height: 40px;
+  }
+}
+
+@media (max-width: 750px) {
+  .reg-left {
+    display: none;
+  }
+  .reg-right {
+    border-radius: 15px;
+    width: 40rem;
+    /* padding: 1rem; */
+    margin-left: -10rem;
+  }
+}
+
 /* Lottie animation and position */
 
 .reg-lottie {
   width: 25rem;
-  /* margin-block: 2rem 2rem; */
-  margin-top: -210px;
+  margin-top: -240px;
   position: absolute;
 }
 
 /* footer border  */
 
-.custom-shape-divider-top-1706979512 {
+.footer-svg-border {
   position: absolute;
-  /* top: 0; */
-  /* left: 0; */
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  margin-top: -0.6rem;
 }
 
-.custom-shape-divider-top-1706979512 svg {
+.footer-svg-border svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
   height: 86px;
 }
 
-.custom-shape-divider-top-1706979512 .shape-fill {
+.footer-svg-border .shape-fill {
   fill: #f9bcac;
+}
+
+/* Admin form for user update data */
+
+.admin-form{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 2rem;
 }

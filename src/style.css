@@ -1,85 +1,102 @@
 /* styles.css */
 
-  .target{
-    position: relative;
-    height: 300vh;
-    /* background-color: #2d3748;  */
-  }
-  
-  .target .sticky {
-    position: sticky;
-    top: 0;
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    overflow: hidden;
-  }
-  
-  section .sticky .motion{
-    display: flex;
-    gap: 4;
-    transform: translateX(1%); 
-  }
-  
-  .root-card {
-    position: relative;
-    height: 450px;
-    width: 450px;
-    overflow: hidden;
-    background-color: #edf2f7;
-  }
-  
-  .root-card .background-image {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    transition: transform 300ms;
-  }
-  
-  .root-card:hover .background-image {
-    transform: scale(1.1);
-  }
-
-  .content{
-    padding: 2rem;
-  }
-  
-  .root-card .content {
-    position: absolute;
-    display: flex;
-    z-index: 10;
-  }
-  
-  .root-card .content p {
-    margin-top: 16rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #000000;
-  }
-
-.root-card .content h2{
-  /* margin-top: 12.5rem; */
+.target {
+  position: relative;
+  height: 300vh;
+  /* background-color: #2d3748;  */
 }
 
-
-.root-card .content .btn{
-  background-color: red;
-  margin-top: 23rem;
-  margin-inline: 4rem;
+.target .sticky {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  overflow: hidden;
 }
+
+section .sticky .motion {
+  display: flex;
+  gap: 4;
+  transform: translateX(1%);
+}
+
+.root-card {
+  position: relative;
+  height: 450px;
+  width: 450px;
+  overflow: hidden;
+  background-color: #edf2f7;
+}
+
+.root-card .background-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  transition: transform 300ms;
+}
+
+.root-card:hover .background-image {
+  transform: scale(1.1);
+}
+
+.content {
+  padding: 2rem;
+}
+
+.heading-card {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.root-card .content {
+  position: absolute;
+  display: flex;
+  z-index: 10;
+}
+
+.root-card .content p {
+  margin-top: 16rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.root-card .content span{
+  margin-top: 14rem;
+}
+
+.root-card .content p {
+  font-size: 0.7rem;
+  font-weight: 100;
+}
+
 /*!! ================== Service card Css =============  */
 
-.serviceCard{
+.serviceCard {
   padding: 5rem;
 }
-.serviceCard .serviceSpan{
+.serviceCard .serviceSpan {
   color: #004534;
   font-weight: 600;
+  /* margin-left: -2rem; */
   font-size: 4rem;
   text-transform: uppercase;
 }
 
-.service-item{
+.service-item {
   padding: 3rem;
-  margin-bottom: -5rem;
+  /* margin-bottom: -5rem; */
+}
+
+/* For responsiveness */
+
+@media (max-width: 1100px) {
+  .serviceCard{
+    /* width: 90rem; */
+    padding: 0;
+  }
+  .serviceSpan{
+    font-size: 1.5rem;
+  }
 }

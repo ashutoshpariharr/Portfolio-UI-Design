@@ -1,15 +1,26 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ButtonWrapper from "../components/button/ButtonWrapper";
 import Lottie from "lottie-react";
 import animationdata from "../assets/lottie/Dog.json";
+import { motion } from "framer-motion";
+import { Section } from "../components/social/TextAni";
+import Loding from "../components/progressBar/Loding";
 
-const Register = () => {
+const Register = ({ setProgress }) => {
+  const [loading, setLoding] = useState(false);
   // this is for storeToken to the browser
   const { storeTokenInLS } = useAuth();
+
+  useEffect(() => {
+    setProgress(90);
+    setTimeout(() => {
+      setProgress(100);
+    }, 1000);
+  }, []);
 
   // this is for navigate register to login
   const navigate = useNavigate();
@@ -50,6 +61,12 @@ const Register = () => {
       const res_data = await response.json();
       console.log("res from token", res_data);
 
+      setLoding(true);
+
+      setTimeout(() => {
+        setLoding(false);
+      }, 4000);
+
       if (response.ok) {
         storeTokenInLS(res_data.token);
         setUser({
@@ -73,22 +90,33 @@ const Register = () => {
   return (
     <div className="reg-container">
       <div className="reg-left">
-        <h1>
-          MERNing to Impress <br /> Join the Code Party
-        </h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit ipsam,
-          officiis <br /> sapiente, eius assumenda qui dolorem fugiat nam nemo,
-          quasi pariatur modi! <br /> Culpa reiciendis incidunt, placeat ducimus
-          eligendi vero qui, similique <br /> quod sunt, aut velit?
-        </p>
+        <Section>
+          <h1>Register for Exclusive Updates For Better Understanding</h1>
+          <br />
+          <p>
+            Be the first to know about my latest projects, insights, and
+            creative endeavors by subscribing to my portfolio. Join my community
+            and stay connected with my journey in the world of web development.
+            Sign up now to receive exclusive updates and behind-the-scenes
+            content directly to your inbox. Let's embark on this adventure
+            together!
+          </p>
+        </Section>
         <div className="reg-lottie">
-          <Lottie animationData={animationdata} />
+          <Section>
+            <Lottie animationData={animationdata} />
+          </Section>
         </div>
       </div>
-      <div className="reg-right">
-        <h1>Create Account</h1>
-        <p>Enter Your Personal Details</p>
+      <motion.div
+        animate={{ x: 70 }}
+        transition={{ duration: 2, type: "spring", damping: 2 }}
+        className="reg-right"
+      >
+        <Section>
+          <h1>Create Account</h1>
+          <p>Enter Your Personal Details</p>
+        </Section>
         <br />
         <form onSubmit={handleSubmit}>
           <div className="reg-group">
@@ -165,11 +193,17 @@ const Register = () => {
           </div>
 
           <div className="button-wrapper">
-            <ButtonWrapper />
+            <Section>{loading ? <Loding /> : <ButtonWrapper />}</Section>
           </div>
         </form>
-        <ButtonWrapper/>
-      </div>
+        <Section>
+          <div className="reg-log">
+            <NavLink className="Navlink" to="/login">
+              <button className="banner-btn log-buton">Log In</button>
+            </NavLink>
+          </div>
+        </Section>
+      </motion.div>
     </div>
   );
 };
