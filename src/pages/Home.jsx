@@ -7,18 +7,8 @@ import Footer from "../pages/Footer";
 import { HoverImageLinks } from "../components/hero/HoverImageLinks";
 import { motion } from "framer-motion";
 import { Section } from "../components/social/TextAni";
-// import resume from "../../public/images/chambal";
 
 const Home = () => {
-  // const element = useRef(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: element,
-  //   offset: ["start 0.9", "start 0.25"],
-  // });
-
-  // useEffect(() => {
-  //   scrollYProgress.on("change", (e) => console.log(e));
-  // }, []);
 
   return (
     <div>
@@ -117,10 +107,7 @@ const Home = () => {
         }}
       >
         <div className="middle-text">
-          {/* <motion.h3
-            ref={element}
-            style={{ opacity: scrollYProgress, padding: "5rem" }}
-          > */}
+         
           <Section>
             <motion.h1
               animate={{ x: 170 }}
@@ -132,7 +119,7 @@ const Home = () => {
             </motion.h1>
           </Section>
           <br />
-          {/* </motion.h3> */}
+    
 
           <Section>
             <p>

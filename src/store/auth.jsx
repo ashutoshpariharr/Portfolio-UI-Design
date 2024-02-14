@@ -63,9 +63,7 @@ export const AuthProvider = ({ children }) => {
 
       if (response.ok) {
         const data = await response.json();
-        // console.log(data);
-
-        // Assuming 'response' contains the services array
+     
         setService(data.response || []);
 
         // console.log("Response fetch successfully from services");

@@ -2,7 +2,6 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import "../../style.css";
 import { Section } from "../social/TextAni";
-// import { Link } from "react-router-dom";
 
 const ServiceCard = () => {
   return (
@@ -38,7 +37,6 @@ const ServiceCard = () => {
         </p>
         <br />
         <br />
-        {/* <span className="serviceSpan">Scroll up</span> */}
         <h3>Why Choose Me?</h3>
         <p>
           With a proven track record of successfully executing diverse projects

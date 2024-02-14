@@ -61,16 +61,6 @@ const Footer = () => {
       </div>
       <Section>
         <div className="footer-below">
-          {/* <div className="below-text">
-            <p>VIRSION</p>
-            <br />
-            <span>2023 @Edition</span>
-          </div>
-          <div className="below-text">
-            <p>LOCAL TIME</p> <br />
-            <span>6am/mumbai</span>
-          </div> */}
-
           <div className="below-text-social">
             <p>SOCIAL</p>
             <div className="footer-icons">
@@ -80,7 +70,7 @@ const Footer = () => {
                 style={{ textDecoration: "none" }}
               >
                 <Magnetic>
-                  <span style={{ fontSize: "15px",  color:'white' }} id="navaa">
+                  <span style={{ fontSize: "15px", color: "white" }} id="navaa">
                     Instagram
                   </span>
                 </Magnetic>
@@ -91,7 +81,7 @@ const Footer = () => {
                 style={{ textDecoration: "none" }}
               >
                 <Magnetic>
-                  <span style={{ fontSize: "15px",  color:'white' }} id="navaa">
+                  <span style={{ fontSize: "15px", color: "white" }} id="navaa">
                     LinkedIn
                   </span>
                 </Magnetic>
@@ -103,7 +93,7 @@ const Footer = () => {
                 target="_blank"
               >
                 <Magnetic>
-                  <span style={{ fontSize: "15px",  color:'white' }} id="navaa">
+                  <span style={{ fontSize: "15px", color: "white" }} id="navaa">
                     Facebook
                   </span>
                 </Magnetic>
@@ -114,7 +104,7 @@ const Footer = () => {
                 target="_blank"
               >
                 <Magnetic>
-                  <span style={{ fontSize: "15px",  color:'white' }} id="navaa">
+                  <span style={{ fontSize: "15px", color: "white" }} id="navaa">
                     Twitter
                   </span>
                 </Magnetic>
@@ -125,7 +115,7 @@ const Footer = () => {
                 target="_blank"
               >
                 <Magnetic>
-                  <span style={{ fontSize: "15px",  color:'white' }} id="navaa">
+                  <span style={{ fontSize: "15px", color: "white" }} id="navaa">
                     Git Hub
                   </span>
                 </Magnetic>
@@ -136,7 +126,7 @@ const Footer = () => {
                 target="_blank"
               >
                 <Magnetic>
-                  <span style={{ fontSize: "15px", color:'white' }} id="navaa">
+                  <span style={{ fontSize: "15px", color: "white" }} id="navaa">
                     Teligram
                   </span>
                 </Magnetic>

@@ -9,18 +9,13 @@ import { useEffect } from "react";
 
 const Service = ({ setProgress }) => {
   const { service = [] } = useAuth();
-  // const {loading} = useAuth();
-
-  // if (loading) {
-  //   return <p>Loading...</p>;
-  // }
 
   useEffect(() => {
-    setProgress(50)
+    setProgress(50);
     setTimeout(() => {
-      setProgress(2000)
+      setProgress(2000);
     }, 2000);
-  }, [])
+  }, []);
 
   if (!Array.isArray(service)) {
     console.error("Service is not an array:", service);
@@ -70,9 +65,6 @@ const Service = ({ setProgress }) => {
 
       <Section>
         <div className="constomer-satisfaction">
-          {/* <div className="cos-1">
-            <h2>Internship Feedbacks</h2>
-          </div> */}
           <div className="cos-2">
             <p>
               During my final internship, I had the privilege of working under

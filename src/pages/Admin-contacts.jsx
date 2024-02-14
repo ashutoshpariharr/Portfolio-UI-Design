@@ -77,7 +77,7 @@ const AdminContacts = ({ setProgress }) => {
         >
           <Loding />
           <br />
-          <p>Loding...</p>
+          <p>Loading...</p>
         </div>
       ) : (
         <div className="adminUser">
@@ -87,7 +87,6 @@ const AdminContacts = ({ setProgress }) => {
                 <th>Name</th>
                 <th>Email</th>
                 <th>Message</th>
-                <th>Edit</th>
                 <th>Delete</th>
               </tr>
             </thead>
@@ -98,9 +97,7 @@ const AdminContacts = ({ setProgress }) => {
                     <td>{information.username}</td>
                     <td>{information.email}</td>
                     <td>{information.message}</td>
-                    <td>
-                      <button className="middleText-btn">Edit</button>
-                    </td>
+                   
                     <td>
                       <button
                         className="middleText-btn"

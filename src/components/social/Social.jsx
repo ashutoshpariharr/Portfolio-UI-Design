@@ -3,13 +3,12 @@ import "./social.css";
 // import SocialIcon from "./SocialIcon";
 
 function Social({ setProgress }) {
-
   useEffect(() => {
-    setProgress(60)
+    setProgress(60);
     setTimeout(() => {
-      setProgress(100)
+      setProgress(100);
     }, 2000);
-  }, [])
+  }, []);
 
   return (
     <div className="social">

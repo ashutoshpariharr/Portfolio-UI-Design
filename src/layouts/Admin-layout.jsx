@@ -45,13 +45,6 @@ function AdminLayout({ setProgress }) {
         </div>
 
         <ul className="sidebar-list">
-          {/* <li className="sidebar-list-item">
-            <Magnetic>
-              <Link to="/admin" style={{ color: "white" }} id="navaa">
-                <BsGrid1X2Fill className="icon-admin" /> Dashboard
-              </Link>
-            </Magnetic>
-          </li> */}
 
           <li className="sidebar-list-item">
             <Magnetic>
@@ -88,7 +81,6 @@ function AdminLayout({ setProgress }) {
       </aside>
 
       <Outlet />
-      {/* Outlet renders the child route components */}
     </>
   );
 }

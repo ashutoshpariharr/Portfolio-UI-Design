@@ -32,10 +32,10 @@ const About = ({ setProgress }) => {
             <br />
 
             <span className="about-information">
-              Hello! I'm Ashutosh Parihar, a passionate Frontend Web Developer
-              based in Agra, Uttar Pradesh, India. With a focus on user-friendly
-              design and captivating web experiences, I'm dedicated to bringing
-              innovative ideas to life.
+              Hello! I'm Ashutosh Parihar, a passionate Frontend Web Developer,
+              MERN Stack Developer based in Agra, Uttar Pradesh, India. With a
+              focus on user-friendly design and captivating web experiences, I'm
+              dedicated to bringing innovative ideas to life.
               <br /> Currently, I'm thriving as a Frontend Developer at VEECORP
               in Mumbai, Maharashtra. Grateful for the opportunities that have
               shaped my professional journey, I'm excited for the next chapter

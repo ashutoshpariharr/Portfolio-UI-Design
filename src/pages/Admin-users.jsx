@@ -92,7 +92,7 @@ function AdminUsers({ setProgress }) {
         >
           <Loding />
           <br />
-          <p>Loding...</p>
+          <p>Loading...</p>
         </div>
       ) : (
         <div className="adminUser">

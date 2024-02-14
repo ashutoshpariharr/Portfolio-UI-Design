@@ -11,7 +11,7 @@ export const Navbar = () => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.5, // Delay between each child
+        staggerChildren: 0.5,
         delayChildren: 0.5, // Delay before children start animating
         staggerDirection: 1, // Reverse order
       },
@@ -106,7 +106,7 @@ export const Navbar = () => {
                         color: isActive ? "#007bff" : "black",
                       })}
                     >
-                      Logout   
+                      Logout
                       <IoIosArrowDown />
                     </NavLink>
                   </Magnetic>

@@ -27,7 +27,6 @@ export const HoverImageLinks = () => {
         <Link
           heading="Social"
           subheading="We want cool people"
-          // imgSrc="https://images.unsplash.com/photo-1496024840928-4c417adf211d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           imgSrc='images/chambal.jpg'
           href="/social"
         />
