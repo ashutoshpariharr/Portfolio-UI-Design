@@ -127,7 +127,7 @@ const Footer = () => {
               >
                 <Magnetic>
                   <span style={{ fontSize: "15px", color: "white" }} id="navaa">
-                    Teligram
+                    Telegram
                   </span>
                 </Magnetic>
               </a>
