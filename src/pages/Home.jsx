@@ -7,17 +7,13 @@ import Footer from "../pages/Footer";
 import { HoverImageLinks } from "../components/hero/HoverImageLinks";
 import { motion } from "framer-motion";
 import { Section } from "../components/social/TextAni";
+import resume from "../assets/Resume/AshutoshCV.pdf";
 
 const Home = () => {
-
   return (
     <div>
       <div className="container">
-        <motion.div
-          animate={{ x: 120 }}
-          transition={{ type: "spring", stiffness: 100, damping: 3 }}
-          className="home-content"
-        >
+        <motion.div animate={{ x: 120 }} className="home-content">
           <p>UI/UX DESIGNER, DEVELOPER</p>
           <h1>
             I'M, <br />
@@ -107,7 +103,6 @@ const Home = () => {
         }}
       >
         <div className="middle-text">
-         
           <Section>
             <motion.h1
               animate={{ x: 170 }}
@@ -119,7 +114,6 @@ const Home = () => {
             </motion.h1>
           </Section>
           <br />
-    
 
           <Section>
             <p>
@@ -168,8 +162,8 @@ const Home = () => {
                 <h1 style={{ marginTop: "2rem" }}>Get My Resume</h1>
                 <br />
 
-                {/* <a href={resume} download={Image}> */}
-                  <div className="button-cv" data-tooltip="Size: 803Kb">
+                <a href={resume} download="CV">
+                  <div className="button-cv" data-tooltip="Size: 103Kb">
                     <div className="button-wrapper-cv">
                       <div className="text-cv">Download</div>
                       <span className="icon-cv">
@@ -194,7 +188,7 @@ const Home = () => {
                       </span>
                     </div>
                   </div>
-                {/* </a> */}
+                </a>
               </center>
             </div>
             <div className="right-hero">

@@ -50,7 +50,7 @@ const Register = ({ setProgress }) => {
     // handle fetch data from the server
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/register", {
+      const response = await fetch("https://portfolio-server-fmd3.onrender.com/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -3,6 +3,7 @@ import { useAuth } from "../store/auth";
 import Loding from "../components/progressBar/Loding";
 import "../layouts/Layout.css";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function AdminUsers({ setProgress }) {
   const [adminusers, setAdminusers] = useState([]);
@@ -11,7 +12,7 @@ function AdminUsers({ setProgress }) {
 
   const authUser = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/admin/users", {
+      const response = await fetch("https://portfolio-server-fmd3.onrender.com/api/admin/users", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -33,7 +34,7 @@ function AdminUsers({ setProgress }) {
   const handleDelete = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/users/delete/${id}`,
+        `https://portfolio-server-fmd3.onrender.com/api/admin/users/delete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -44,7 +45,12 @@ function AdminUsers({ setProgress }) {
 
       // Check if the response is not OK
       if (!response.ok) {
+        toast.error("User Not Deleted!")
         throw new Error("Failed to delete user");
+      }
+
+      if(response.ok){
+        toast.success("User Deleted Successfully!")
       }
 
       // Check if the response is JSON

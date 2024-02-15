@@ -15,7 +15,7 @@ function GetSingleUser() {
   const updateUserInfo = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/users/delete/edit/${params.id}`,
+        `https://portfolio-server-fmd3.onrender.com/api/admin/users/delete/edit/${params.id}`,
         {
           method: "GET",
           headers: {
@@ -48,7 +48,7 @@ function GetSingleUser() {
 
     try {
       const updateData = await fetch(
-        `http://localhost:5000/api/admin/users/update/${params.id}`,
+        `https://portfolio-server-fmd3.onrender.com/api/admin/users/update/${params.id}`,
         {
           method: "PATCH",
           headers: {

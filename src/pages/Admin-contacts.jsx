@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../layouts/Layout.css";
 import Loding from "../components/progressBar/Loding";
+import { toast } from "react-toastify";
 
 const AdminContacts = ({ setProgress }) => {
   const [adminContact, setAdminContact] = useState([]);
@@ -10,7 +11,7 @@ const AdminContacts = ({ setProgress }) => {
 
   const adminContactData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/admin/contacts", {
+      const response = await fetch("https://portfolio-server-fmd3.onrender.com/api/admin/contacts", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -30,7 +31,7 @@ const AdminContacts = ({ setProgress }) => {
   const deleteMessage = async (id) => {
     try {
       const res = await fetch(
-        `http://localhost:5000/api/admin/contacts/delete/${id}`,
+        `https://portfolio-server-fmd3.onrender.com/api/admin/contacts/delete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -38,6 +39,14 @@ const AdminContacts = ({ setProgress }) => {
           },
         }
       );
+
+      if(res.ok){
+        toast.success("Your Data Deleted Successfully!");
+      }
+      if(!res){
+        
+        toast.error("Bad Request From Server");
+      }
 
       const data = await res.json();
       console.log(data);
