@@ -144,7 +144,7 @@ const cards = [
     title:
       "Created a weather application utilizing APIs, showcasing proficiency in JavaScript and API integration to deliver real-time weather updates with user-friendly features. Skills => HTML5, CSS3 JavaScript",
 
-    BtnUrl: "http://asps.infinityfreeapp.com/",
+    BtnUrl: "https://ashutoshpariharr.github.io/Weather/",
     codeUrl: "https://github.com/ashutoshpariharr/Weather",
     id: 3,
   },
